@@ -1,0 +1,259 @@
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Lato';
+}
+
+/* Hero Image and text */
+.carousel-item img{
+    width: auto;
+    height: auto;  
+}
+
+.text-black {
+    color: #000 !important;
+}
+
+.logo {
+    color: #e74c3c;
+    font-family: 'DynaPuff', cursive;
+    font-weight: 300;
+    font-size: 40px;
+    line-height:1.3;
+}
+.logo span {
+    color: rgb(0, 0, 0);
+    display: inline-block;
+    line-height: 1.8;
+    padding: 0 16px;
+}
+
+
+.game-text{ 
+    color: white;
+    font-size: 4vw;
+    text-shadow: 3px 3px 3px black;
+
+}
+
+.shop-now-button {
+  color: #fff;
+  background-color: #e74c3c;
+  margin-bottom: 30%;
+  padding: 2px;
+  font-size: 2vw;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.shop-now-button:hover {
+  transform: scale(1.1);
+  color: #fff;
+}
+
+/* footer */
+.site-footer {
+  background-color:#26272b;
+  padding: 45px 0 20px;
+  font-size:15px;
+  line-height: 24px;
+  color:#737373;
+}
+
+.site-footer hr {
+  border-top-color:#bbb;
+  opacity:0.5
+}
+
+.site-footer hr.small {
+  margin:20px 0
+}
+
+.site-footer h6 {
+  color:#fff;
+  font-size:16px;
+  text-transform:uppercase;
+  margin-top:5px;
+  letter-spacing:2px
+}
+.site-footer a {
+  color:#737373;
+}
+
+.site-footer a:hover {
+  color:#3366cc;
+  text-decoration:none;
+}
+
+.footer-links {
+  padding-left:0;
+  list-style:none
+}
+
+.footer-links li {
+  display:block
+}
+
+.footer-links a {
+  color:#737373
+}
+
+.footer-links a:active,.footer-links a:focus,.footer-links a:hover {
+  color:#3366cc;
+  text-decoration:none;
+}
+
+.footer-links.inline li {
+  display:inline-block
+}
+
+.site-footer .social-icons {
+  text-align:right
+}
+
+.site-footer .social-icons a {
+  width:40px;
+  height:40px;
+  line-height:40px;
+  margin-left:6px;
+  margin-right:0;
+  border-radius:100%;
+  background-color:#33353d;
+}
+
+.copyright-text {
+  margin:0
+}
+
+.social-icons {
+  padding-left:0;
+  margin-bottom:0;
+  list-style:none
+}
+
+.social-icons li {
+  display:inline-block;
+  margin-bottom:4px;
+}
+
+.social-icons li.title {
+  margin-right:15px;
+  text-transform:uppercase;
+  color:#96a2b2;
+  font-weight:700;
+  font-size:13px
+}
+
+.social{
+  margin-top: 12px;
+}
+
+.social-icons a {
+  background-color:#eceeef;
+  color: #818A7A;
+  font-size:16px;
+  display: inline-block;
+  line-height:44px;
+  width:44px;
+  height:44px;
+  text-align:center;
+  margin-right:8px;
+  border-radius:100%;
+  -webkit-transition:all .2s linear;
+  -o-transition:all .2s linear;
+  transition: all .2s linear;
+}
+
+.social-icons a:active,.social-icons a:focus,.social-icons a:hover {
+  color:#fff;
+  background-color:#29aafe
+}
+
+.social-icons.size-sm a {
+  line-height:34px;
+  height:34px;
+  width:34px;
+  font-size:14px
+}
+
+.social-icons a.facebook:hover {
+  background-color:#3b5998
+}
+
+.social-icons a.twitter:hover {
+  background-color:#00aced
+}
+
+.social-icons a.instagram:hover {
+  background-color:#a55cd0
+}
+
+.social-icons a.youtube:hover {
+  background-color:#FF0000
+}
+
+/* MailChimp */
+#mc_embed_signup{
+  background:#26272b; 
+  color: #fff;
+  clear:left; 
+  font:14px Helvetica,Arial,sans-serif;  
+  width:600px;
+}
+
+/* Media Queries */
+@media (max-width: 1229px) {
+  #mc_embed_signup{
+      width: 500px;
+}}
+@media (max-width: 1185px) {
+  .shop-now-button{
+    margin-bottom: 25%;
+  }}
+@media (min-width: 1047px) {
+  .logo .logo-span{
+        font-size: 30px;
+        font-weight: 300;
+        line-height: 1;
+}}
+@media (max-width: 1031px) {
+  #mc_embed_signup{
+      width: 400px;
+}}
+@media (max-width:991px) {
+  .site-footer [class^=col-]
+  {
+    margin-bottom:30px
+  }
+}
+@media (max-width: 830px) {
+  #mc_embed_signup{
+      width: 370px;
+}}
+
+@media (max-width:767px) {
+  .site-footer
+  {
+    padding-bottom:0
+  }
+  .site-footer .copyright-text,.site-footer .social-icons
+  {
+    text-align:center
+  }
+  .social-icons li.title
+  {
+    display:block;
+    margin-right:0;
+    font-weight:600
+  }
+}
+@media (max-width: 430px) {
+  #mc_embed_signup{
+      width: 306px;
+}}
+@media (max-width: 490px) {
+.shop-now-button{
+  margin-bottom: 5%;
+}}
