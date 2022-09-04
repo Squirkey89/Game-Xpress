@@ -6,30 +6,97 @@ body {
     font-family: 'Lato';
 }
 
+.text-black {
+  color: #000 !important;
+}
+.border-black {
+  border: 1px solid #33353d !important;
+}
+
+.bg-background {
+  background: #33353d!important;
+}
+
+.btn-black {
+  background: #33353d!important;
+}
+
+/* Navigation */
+.logo {
+  color: #e74c3c;
+  font-family: 'DynaPuff', cursive;
+  font-weight: 300;
+  font-size: 3.5vw;
+  line-height:1.3;
+}
+.fas {
+  font-size: 1vw;
+}
+.font-a 
+{
+  padding-top: 5px;
+}
+
+.logo span {
+  color: #33353d;
+  display: inline-block;
+  line-height: 1.8;
+  padding: 0 16px;
+}
+.nav-link{
+  font-size: 18px;
+}
+.nav-text {
+  color: #fff;
+}
+
+/* Search bar input & button */
+/* From Bulma */
+.icon {
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  height: 1.5rem;
+  width: 1.5rem;
+  color: #fff;
+}
+.searchbar-input {
+  border: 2px solid #33353d;
+  background: #f5f5f5;
+  transition: 0.25s, box-shadow 0.25s;
+  
+}
+
+.searchbar-input:focus {
+  background: white;
+  box-shadow: 2px 2px #c8c8c8, -0.3em 0 .2em #c8c8c8;
+}
+
+.searchbar-input::placeholder {
+  color: #a49f9f;
+}
+
+.searchbar-button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  color: #fff;
+}
+.searchbar-button:focus {
+box-shadow: 2px 2px #c8c8c8, -0.3em 0 .2em #c8c8c8;
+}
+
+
+.searchbar-button:active {
+  box-shadow: inset 0 0 30px #a49f9f;;
+}
+
 /* Hero Image and text */
 .carousel-item img{
     width: auto;
     height: auto;  
 }
-
-.text-black {
-    color: #000 !important;
-}
-
-.logo {
-    color: #e74c3c;
-    font-family: 'DynaPuff', cursive;
-    font-weight: 300;
-    font-size: 40px;
-    line-height:1.3;
-}
-.logo span {
-    color: rgb(0, 0, 0);
-    display: inline-block;
-    line-height: 1.8;
-    padding: 0 16px;
-}
-
 
 .game-text{ 
     color: white;
@@ -43,7 +110,7 @@ body {
   background-color: #e74c3c;
   margin-bottom: 30%;
   padding: 2px;
-  font-size: 2vw;
+  font-size: 2.5vw;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
@@ -52,6 +119,53 @@ body {
   transform: scale(1.1);
   color: #fff;
 }
+.nav-background{
+  background-color:#33353d;
+}
+.main-nav{
+color: #ffff;
+}
+
+/* Free delivery banner */
+.delivery-banner {
+  background: #33353d;
+  object-fit: cover;
+  width: 100%;
+  height: 65px;
+  padding: 0px;
+}
+.banner{
+  left: 0;
+  right: 0;
+}
+
+.banner-content {
+  padding: 16px;
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.banner-text {
+  width: 100%;
+  flex-grow: 1;
+  line-height: 1.4;
+  font-size: 2vw;
+
+}
+
+.banner-close {
+  background: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.banner-text,
+.banner-close > span {
+  color: #000;
+}
+
 
 /* footer */
 .site-footer {
@@ -212,25 +326,42 @@ body {
   .shop-now-button{
     margin-bottom: 25%;
   }}
-@media (min-width: 1047px) {
+@media (max-width: 1047px) {
   .logo .logo-span{
-        font-size: 30px;
-        font-weight: 300;
-        line-height: 1;
+        
+        
 }}
 @media (max-width: 1031px) {
   #mc_embed_signup{
       width: 400px;
 }}
-@media (max-width:991px) {
+@media (max-width:992px) {
   .site-footer [class^=col-]
   {
     margin-bottom:30px
   }
+  body {
+    height: calc(100vh - 116px);
 }
+.nav-background{
+  background-color:#fff;
+}
+.nav-text {
+  color: #000;
+  font-weight: 0;
+}
+
+}
+
 @media (max-width: 830px) {
   #mc_embed_signup{
-      width: 370px;
+      width: 370px;}
+
+.banner-text {
+  width: 100%;
+  flex-grow: 1;
+  line-height: 1.4;
+  font-size: 1rem;
 }}
 
 @media (max-width:767px) {
@@ -249,11 +380,30 @@ body {
     font-weight:600
   }
 }
+@media (max-width: 650px) {
+  .font-a 
+  {
+    font-size: 0.7em; 
+  }
+}
+@media (max-width: 490px) {
+  .shop-now-button{
+    margin-bottom: 5%;
+}}
+
 @media (max-width: 430px) {
   #mc_embed_signup{
       width: 306px;
 }}
-@media (max-width: 490px) {
-.shop-now-button{
-  margin-bottom: 5%;
+
+
+@media (max-width: 424px) {
+.banner-text {
+  width: 100%;
+  flex-grow: 1;
+  line-height: 1.4;
+  font-size: 3.4vw;
+}
+.nav-link{
+  padding: 0.15rem;
 }}

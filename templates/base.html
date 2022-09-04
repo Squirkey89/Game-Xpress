@@ -18,7 +18,8 @@
     integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&amp;display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DynaPuff&amp;display=swap" rel="stylesheet">
-  <link href="//cdn-images.mailchimp.com/embedcode/classic-071822.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="//cdn-images.mailchimp.com/embedcode/classic-071822.css" type="text/css">
   <link rel="stylesheet" href="/static/css/base.css">
   {% endblock %}
 
@@ -45,7 +46,7 @@
 
 <body>
   <header class="container-fluid">
-    <div id="topnav" class="row bg-white pt-lg-2 d-lg-flex">
+    <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
       <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
         <a href="{% url 'home' %}" class="nav-link main-logo-link">
           <h2 class="logo-holder logo"><strong>Game</strong><span>Xpress</span></h2>
@@ -54,10 +55,10 @@
       <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
         <form method="GET" action="">
           <div class="input-group w-100">
-            <input class="form-control border border-black rounded-0" type="text" name="q"
+            <input class="form-control border border-black searchbar-input" type="text" name="q"
               placeholder="Search our site">
             <div class="input-group-append">
-              <button class="form-control btn btn-black border border-black rounded-0" type="submit">
+              <button class="form-control btn btn-black border border-black searchbar-button" type="submit">
                 <span class="icon">
                   <i class="fas fa-search"></i>
                 </span>
@@ -106,6 +107,31 @@
         </ul>
       </div>
     </div>
+    <div class="row nav-background">
+      <nav class="navbar navbar-expand-lg navbar-light w-100">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
+          aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        {% include 'includes/mobile-top-header.html' %}
+        {% include 'includes/main-nav.html' %}
+      </nav>
+    </div>
+    <div style="width: 100%;" class="bg-white">
+    <div class="text-center bg-white delivery-banner">
+      <div class="bg-white text-white banner-content">
+          <h4 class="banner-text text-uppercase">Free delivery on
+            orders over €50{{ free_delivery_threshold }}! <i class="fas fa-truck fa-1x" aria-hidden="true"></i></h4>
+        <button class="banner-close" type="button">
+          <span class="material-icons">
+            close
+          </span>
+        </button>
+
+      </div>
+    </div>
+  </div>
+
   </header>
 
   {% block content %}
@@ -176,7 +202,7 @@
       <div class="row">
         <div class="col-md-8 col-sm-6 col-xs-12">
           <p class="copyright-text">Copyright &copy; 2022 All Rights Reserved by
-            <a href="#">GameXpress</a>.
+            <a href="{% url 'home' %}">GameXpress</a>.
           </p>
         </div>
 
@@ -217,6 +243,11 @@
       ftypes[5] = 'birthday';
     }(jQuery));
     var $mcj = jQuery.noConflict(true);
+  </script>
+  <script type="text/javascript">
+    document.querySelector(".banner-close").addEventListener("click", function () {
+      this.closest(".delivery-banner").style.display = "none";
+    })
   </script>
 
 
