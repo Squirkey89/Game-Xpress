@@ -1,0 +1,66 @@
+[
+  {
+    "pk": 1,
+    "model": "products.category",
+    "fields": {
+      "name": "ps4_games",
+      "friendly_name": "PS4 Games"
+    }
+  },
+  {
+    "pk": 2,
+    "model": "products.category",
+    "fields": {
+      "name": "ps5_games",
+      "friendly_name": "PS5 Games"
+    }
+  },
+  {
+    "pk": 3,
+    "model": "products.category",
+    "fields": {
+      "name": "xbox_series_x/s",
+      "friendly_name": "Xbox Series X/S"
+    }
+  },
+  {
+    "pk": 4,
+    "model": "products.category",
+    "fields": {
+      "name": "xbox_one_games",
+      "friendly_name": "Xbox One Games"
+    }
+  },
+  {
+    "pk": 5,
+    "model": "products.category",
+    "fields": {
+      "name": "nintendo_games",
+      "friendly_name": "Nintendo Games"
+    }
+  },
+  {
+    "pk": 6,
+    "model": "products.category",
+    "fields": {
+      "name": "playstation_consoles",
+      "friendly_name": "Playstation Consoles"
+    }
+  },
+  {
+    "pk": 7,
+    "model": "products.category",
+    "fields": {
+      "name": "Xbox Consoles",
+      "friendly_name": "xbox_consoles"
+    }
+  },
+  {
+    "pk": 8,
+    "model": "products.category",
+    "fields": {
+      "name": "nintendo_consoles",
+      "friendly_name": "Nintendo Consoles"
+    }
+  }
+]
