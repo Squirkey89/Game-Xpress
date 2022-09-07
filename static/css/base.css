@@ -166,7 +166,18 @@ color: #ffff;
   color: #000;
 }
 
-
+.overlay {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background: white;
+  z-index: -1;
+}
+.horizontal-rule{
+  margin-bottom: 12em;
+}
 /* footer */
 .site-footer {
   background-color:#26272b;
