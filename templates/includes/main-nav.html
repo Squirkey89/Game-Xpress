@@ -11,9 +11,9 @@
                     aria-haspopup="true" aria-expanded="false">
                        <span class="nav-text">Playstation</span></a>
                 <div class="dropdown-menu border-0" aria-labelledby="Playststion-games-&-console">
-                    <a href="#" class="dropdown-item">PS5 Games</a>
-                    <a href="#" class="dropdown-item">PS4 Games</a>
-                    <a href="#" class="dropdown-item">Consoles</a>
+                    <a href="{% url 'products' %}?category=ps5_games" class="dropdown-item">PS5 Games</a>
+                    <a href="{% url 'products' %}?category=ps4_games" class="dropdown-item">PS4 Games</a>
+                    <a href="{% url 'products' %}?category=playstation_consoles" class="dropdown-item">Consoles</a>
                 </div>
             </li>
 
@@ -22,9 +22,9 @@
                     aria-haspopup="true" aria-expanded="false">
                     <span class="nav-text">Xbox</span></a>
                 <div class="dropdown-menu border-0" aria-labelledby="Xbox-games-&-console">
-                    <a href="#" class="dropdown-item">Xbox X/S Games</a>
-                    <a href="#" class="dropdown-item">Xbox One Games</a>
-                    <a href="#" class="dropdown-item">Consoles</a>
+                    <a href="{% url 'products' %}?category=xbox_series_x/s" class="dropdown-item">Xbox X/S Games</a>
+                    <a href="{% url 'products' %}?category=xbox_one_games" class="dropdown-item">Xbox One Games</a>
+                    <a href="{% url 'products' %}?category=xbox_consoles" class="dropdown-item">Consoles</a>
                 </div>
             </li>
 
@@ -33,9 +33,10 @@
                     aria-haspopup="true" aria-expanded="false">
                      <span class="nav-text">Nintendo</span></a>
                 <div class="dropdown-menu border-0" aria-labelledby="nintendo-games-&-console">
-                    <a href="#" class="dropdown-item">Nintendo Games</a>
-                    <a href="#" class="dropdown-item">Consoles</a>
+                    <a href="{% url 'products' %}?category=nintendo_games" class="dropdown-item">Nintendo Games</a>
+                    <a href="{% url 'products' %}?category=nintendo_consoles" class="dropdown-item">Consoles</a>
                 </div>
             </li>
+            
     </ul>
 </div>

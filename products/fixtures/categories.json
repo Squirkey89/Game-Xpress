@@ -3,18 +3,18 @@
     "pk": 1,
     "model": "products.category",
     "fields": {
+      "name": "ps5_games",
+      "friendly_name": "PS5 Games"
+    }
+  },{
+    "pk": 2,
+    "model": "products.category",
+    "fields": {
       "name": "ps4_games",
       "friendly_name": "PS4 Games"
     }
   },
-  {
-    "pk": 2,
-    "model": "products.category",
-    "fields": {
-      "name": "ps5_games",
-      "friendly_name": "PS5 Games"
-    }
-  },
+
   {
     "pk": 3,
     "model": "products.category",
@@ -51,8 +51,8 @@
     "pk": 7,
     "model": "products.category",
     "fields": {
-      "name": "Xbox Consoles",
-      "friendly_name": "xbox_consoles"
+      "name": "xbox_consoles",
+      "friendly_name": "Xbox Consoles"
     }
   },
   {

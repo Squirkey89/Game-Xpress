@@ -186,7 +186,7 @@
       "sku": "pp5007210063",
       "name": "Stray",
       "description": "Stray is a 2022 adventure video game. The story follows a stray cat who falls into a walled city populated by robots, machines, and mutant bacteria, and sets out to return to the surface with the help of a drone companion called B-12.",
-      "genre": "Family",
+      "genre": 1,
       "price": 29.99,
       "category": 1,
       "rating": 8.5,
@@ -356,7 +356,7 @@
       "price": 39.99,
       "category": 2,
       "rating": 7.9,
-      "image_url": "https://image.smythstoys.com/picture/desktop/213895.webp",
+      "image_url": "https://www.smythstoys.com/ie/en-ie/video-games-and-tablets/video-games/f1-manager-22/f1-manager-22-ps4/p/213895",
       "image": "213895.webp"
     }
   },
@@ -486,7 +486,7 @@
     "fields": {
       "sku": "pp5006390235",
       "name": "Bugsnax",
-      "description": "Bugsnax is an adventure video game developed by independent game studio Young Horses. In the game, players explore a mysterious island and attempt to find and capture the eponymous half-bug-half-snack creatures. The game was unveiled in June 2020 during Sony's PlayStation 5 live-streamed reveal event",
+      "description": "Bugsnax is an adventure video game developed by independent game studio Young Horses. In the game, players explore a mysterious island and attempt to find and capture the eponymous half-bug-half-snack creatures. The game was unveiled in June 2020 during Sony's live-streamed reveal event",
       "genre": "Platformer",
       "price": 19.99,
       "category": 2,
@@ -592,7 +592,7 @@
       "sku": "pp5006330208",
       "name": "Riders Republic",
       "description": "Jump into the Riders Republic massive multiplayer playground! Grab your bike, skis, snowboard, or wingsuit and explore an open world sports paradise where the rules are yours to make—or break. Battle against over 50 players simultaneously in a massive multiplayer playground",
-      "genre": "",
+      "genre": "Sport",
       "price": 29.99,
       "category": 2,
       "rating": 8.6,
@@ -817,7 +817,7 @@
       "sku": "pp5006310935",
       "name": "Fast & Furious: Spy Racers",
       "description": "The criminal organization, SH1FT3R, is on the rise, now it’s time for you to stop their plans! Get ready to trigger traps, hit speed boosts, and out-race the competition to claim victory. To be the champion, you’ll need to beat the growing threat of SH1FT3R in a high-stakes, adrenaline-fueled racing tournament.",
-      "genre": "",
+      "genre": "Sport",
       "price": 29.99,
       "category": 3,
       "rating": 6.4,
@@ -892,7 +892,7 @@
       "sku": "pp5006280190",
       "name": "Goat Simulator 3",
       "description": "Goat Simulator 3 is a brand new third-person sandbox adventure game in which you get to become the literal GOAT. Just like the first Goat Simulator, you'll need to headbutt, lick and triple-jump your way across the giant island of San Angora - this time with all new areas, challenges, and events to discover.",
-      "genre": "Family",
+      "genre": "1",
       "price": 39.99,
       "category": 3,
       "rating": 8.5,
@@ -1507,7 +1507,7 @@
       "sku": "pp5005210241",
       "name": "PlayStation 5 Console",
       "description": "The PlayStation 5 is the successor to the PlayStation 4, it's main hardware features include a solid-state drive customized for high-speed data streaming to enable significant improvements in storage performance, an AMD GPU capable of 4K resolution display at up to 120 frames per second, hardware-accelerated ray tracing for realistic lighting and reflections, and the Tempest Engine allowing for hardware-accelerated 3D audio effects. Other features include the DualSense controller with haptic feedback and backward compatibility with the majority of PlayStation 4 and PlayStation VR games.",
-      "genre": "Console",
+      "genre": "playstation",
       "price": 549.99,
       "category": 6,
       "rating": 9.5,
@@ -1522,7 +1522,7 @@
       "sku": "pp5005280104",
       "name": "PS5 DualSense Wireless-Controller",
       "description": "The DualSense™ wireless controller offers immersive haptic feedback2, dynamic adaptive triggers2 and a built-in microphone, all integrated into an iconic comfortable design. Feel physically responsive feedback to your in-game actions with dual actuators which replace traditional rumble motors.",
-      "genre": "Controller",
+      "genre": "playstation",
       "price": 69.99,
       "category": 6,
       "rating": 9,
@@ -1537,12 +1537,12 @@
       "sku": "pp5005310360",
       "name": "Playstation 4",
       "description": "The Sony PlayStation 4 (PS4), a next-generation console released in 2013. Today it still boasts outstanding graphics and a smooth online multiplayer experience. The PS4 also doubled as a Blu-ray player and a media streaming device, and Sony’s PlayStation Now subscription service provided access to hundreds of current and legacy games.",
-      "genre": "Console",
+      "genre": "playstation",
       "price": 249.99,
       "category": 6,
       "rating": 8.5,
-      "image_url": "https://cdn.shopify.com/s/files/1/0605/1754/8256/products/Untitleddesign_1_19e91a75-71c1-4acd-9b73-14c6c96fa729_2048x2048.png?v=1649509970",       
-      "image": "ps4.webp"
+      "image_url": "https://m.media-amazon.com/images/I/61n-yWHcmSS._AC_UY327_QL65_.jpg",       
+      "image": "61n-yWHcmSS._AC_UY327_QL65_.jpg"
     }
   },
   {
@@ -1552,7 +1552,7 @@
       "sku": "pp5005330595",
       "name": " XBOX Series X",
       "description": "Experience 1,000s of titles from 4 generations of gaming on Series X – where games look and play better than ever.Next-Gen Speed Unleash faster, more streamlined gameplay with Xbox Velocity Architecture. Powered by a custom SSD, Xbox Series X significantly reduces load times. And with new Quick Resume, it’s easy to switch between multiple games in an instant. Download and play over 100 high-quality games, including new titles like Halo Infinite the day they release.",
-      "genre": "Console",
+      "genre": "xbox",
       "price": 499.99,
       "category": 7,
       "rating": 9,
@@ -1567,7 +1567,7 @@
       "sku": "pp5005330596",
       "name": "XBOX One",
       "description": "Play the greatest games line-up, including Xbox 360 classics, on a 40% smaller console. Just don't let its size fool you: with an internal power supply and up to 1TB of internal storage, the Xbox One is the most advanced Xbox ever.With four times the resolution of standard HD, 4K Ultra HD delivers the clearest, most realistic video possible. Stream 4k content on Netflix and Amazon Video and watch Ultra HD Blu-ray movies in stunning visual fidelity with High Dynamic Range.",
-      "genre": "Console",
+      "genre": "xbox",
       "price": 249.99,
       "category": 7,
       "rating": 9.2,
@@ -1582,7 +1582,7 @@
       "sku": "pp5005430914",
       "name": "Xbox Wireless Controller ",
       "description": "The Xbox Wireless Controller works with Xbox One S, Xbox One X, Xbox Series X, Xbox Series S, Windows 10 and mobile.Elevate your game with the modernised Xbox Wireless Controller. Experience enhanced comfort during gameplay and stay on target with the textured grip. Gamers can seamlessly capture and share content at the touch of the Share button, streaming to YouTube or Twitch in an instant.",
-      "genre": "Controller",
+      "genre": "xbox",
       "price": 64.99,
       "category": 7,
       "rating": 8.9,
@@ -1597,7 +1597,7 @@
       "sku": "pp5005430944",
       "name": "Nintendo Switch",
       "description": "The Nintendo Switch brings you 3 ways to play: docked, tabletop and handheld. This is the console that revolutionises gaming, easily switching from home console to handheld system. Experience HD gaming on your TV, flip to tabletop mode to share the screen or attach the Joy-Con to take your favourite games on the go.",
-      "genre": "Console",
+      "genre": "Nintendo",
       "price": 299.99,
       "category": 8,
       "rating": 9.5,
@@ -1612,7 +1612,7 @@
       "sku": "pp5005510265",
       "name": "Nintendo Switch Lite",
       "description": "The Nintendo Switch Lite is a compact console developed for handheld gaming. When it comes to the Nintendo Switch, grey is the colour! Take your gaming on the go with the Lite version of the must-have console. For Gamers On the Move This lightweight console lets gamers take their favourite Nintendo games wherever they go. The streamlined and compact design of your Nintendo Switch grey console makes it easy to take from trains to parks to anywhere you play. Controllers such as a  Control Pad are built into the console for handheld play.",
-      "genre": "Console",
+      "genre": "Nintendo",
       "price": 199.99,
       "category": 8,
       "rating": 9,
@@ -1620,4 +1620,5 @@
       "image": "181661.webp"
     }
   }
+  
 ]

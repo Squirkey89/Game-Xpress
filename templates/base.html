@@ -28,13 +28,9 @@
 
   {% block corejs %}
   <script src="https://kit.fontawesome.com/97488dfb41.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"
-    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
-    integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"> </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous">
   </script>
   {% endblock %}
 
@@ -53,7 +49,7 @@
         </a>
       </div>
       <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-        <form method="GET" action="">
+        <form method="GET" action="{% url 'products' %}">
           <div class="input-group w-100">
             <input class="form-control border border-black searchbar-input" type="text" name="q"
               placeholder="Search our site">
@@ -249,7 +245,30 @@
       this.closest(".delivery-banner").style.display = "none";
     })
   </script>
+<script>
+  let movies = [];
 
+function init(){
+	document.getElementById("retrieveGenre").onclick = genre;
+	genre();
+
+  function genre(){
+	let xhttp = new XMLHttpRequest();
+
+	xhttp.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+			let responseObject = JSON.parse(xhttp.responseText);
+			movies = responseObject.results;
+			render();
+		}
+	};
+
+	xhttp.open("GET", "genre.json", true);
+	xhttp.send();
+}
+
+}
+</script>
 
 
 </body>

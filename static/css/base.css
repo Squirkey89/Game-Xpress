@@ -21,6 +21,15 @@ body {
   background: #33353d!important;
 }
 
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: 0;
+  text-align: center
+}
+li {
+  display: inline-block;
+}
 /* Navigation */
 .logo {
   color: #e74c3c;
@@ -178,6 +187,7 @@ color: #ffff;
 .horizontal-rule{
   margin-bottom: 12em;
 }
+
 /* footer */
 .site-footer {
   background-color:#26272b;

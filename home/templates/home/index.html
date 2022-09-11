@@ -24,7 +24,7 @@
         <h5 class="game-text">
           The new Playstation 5 is now available</h5>
         <h4>
-          <a href="" class="shop-now-button btn btn-sm rounded-0 text-uppercase py-3">Shop Now</a>
+          <a href="{% url 'products' %}?category=playstation_consoles" class="shop-now-button btn btn-sm rounded-0 text-uppercase py-3">Shop Now</a>
         </h4>
       </div>
     </div>
@@ -33,7 +33,7 @@
       <div class="carousel-caption d-block">
         <h5 class="game-text">The latest PS5 Games</h5>
         <h4>
-          <a href="" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Shop Now</a>
+          <a href="{% url 'products' %}?category=ps4_games" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Shop Now</a>
         </h4>
       </div>
     </div>
@@ -42,7 +42,7 @@
       <div class="carousel-caption d-block">
         <h5 class="game-text">The latest XBOX Games</h5>
         <h4>
-          <a href="" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Shop Now</a>
+          <a href="{% url 'products' %}?category=xbox_series_x/s" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Shop Now</a>
         </h4>
       </div>
     </div>
