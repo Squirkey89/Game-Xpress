@@ -453,3 +453,18 @@ color: #ffff;
 .nav-link{
   padding: 0.15rem;
 }}
+
+
+.CartContainer {
+  margin: auto;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px 10px #20212233;
+  height: auto;
+}
+
+.shop-link {
+  background-color: #33353d;
+  color:#fff;
+}
+
