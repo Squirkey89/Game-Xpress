@@ -245,30 +245,6 @@
       this.closest(".delivery-banner").style.display = "none";
     })
   </script>
-<script>
-  let movies = [];
-
-function init(){
-	document.getElementById("retrieveGenre").onclick = genre;
-	genre();
-
-  function genre(){
-	let xhttp = new XMLHttpRequest();
-
-	xhttp.onreadystatechange = function() {
-		if (this.readyState == 4 && this.status == 200) {
-			let responseObject = JSON.parse(xhttp.responseText);
-			movies = responseObject.results;
-			render();
-		}
-	};
-
-	xhttp.open("GET", "genre.json", true);
-	xhttp.send();
-}
-
-}
-</script>
 
 {% block postloadjs %}
     {% endblock %}
