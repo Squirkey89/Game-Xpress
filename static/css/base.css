@@ -149,6 +149,10 @@ color: #ffff;
   left: 0;
   right: 0;
 }
+.qty_input {
+  text-align: center;
+  width: 100%;
+}
 
 .banner-content {
   padding: 16px;
@@ -355,6 +359,9 @@ color: #ffff;
   background-color: #7a7a7a;
 }
 
+.btn a {
+  text-decoration: none;
+}
 
 /* MailChimp */
 #mc_embed_signup{

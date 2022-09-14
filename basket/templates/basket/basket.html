@@ -56,8 +56,10 @@
                             {% endfor %}
                             <tr>
                                 <td colspan="5" class="pt-5 text-right">
+                                    <hr>
                                     <h6><strong>Basket Total: ${{ total|floatformat:2 }}</strong></h6>
                                     <h6>Delivery: ${{ delivery|floatformat:2 }}</h6>
+                                    <hr>
                                     <h4 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
                                     {% if free_delivery_delta > 0 %}
                                         <p class="mb-1 text-danger">
@@ -85,10 +87,11 @@
                         </table>
                     </div>
                 {% else %}
-                    <p class="lead mb-5">Your basket is empty.</p>
-                    <a href="{% url 'products' %}" class="btn btn-outline-black border-black rounded-1 btn-lg bg-white">
+                    <p class="lead mb-5 ml-5">Your basket is empty.</p>
+                    <hr>
+                    <a href="{% url 'products' %}" class="btn btn-outline-black border-black rounded-1 btn-lg mb-5 ml-5 bg-white">
                         <span class="icon">
-                            <i class="fas fa-chevron-left"></i>
+                            <i class="fas fa-chevron-left text-black"></i>
                         </span>
                         <span class="text-uppercase">Keep Shopping</span>
                     </a>
