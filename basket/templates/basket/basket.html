@@ -2,39 +2,98 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
-<div class="CartContainer m-5 pb-5">
-    <div class="container-fluid">
-    <div class="row">
-        <div class="col mt-5 mb-3 pt-3 ml-4">
-            <h2>Shopping Basket</h2>
-            <hr>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            {% if basket_items %}
-            <div class="table-responsive rounded">
-                {{ basket_items }}
+<div class="overlay"></div>
+    <div class="container mb-5 basket mt-5">
+        <div class="row">
+            <div class="col">
+                <h2 class="logo-font mb-4 mt-5 ml-5">Shopping Basket</h2>
+                <hr>
             </div>
-            {% else %}
-                <p class="lead my-5 pb-3 ml-4">Your shopping basket is currently empty.</p>
-                <a href="{% url 'products' %}" class="btn text-center bg-black shop ml-4">
-                    <span>
-                        <i class="fa fa-chevron-left"></i>
-                    </span>
-                    <span>Keep Shopping</span>
-                </a>
-            {% endif %}
+        </div>
+
+        <div class="row">
+            <div class="col">
+                {% if basket_items %}
+                    <div class="table-responsive rounded">
+                        <table class="table table-sm table-borderless">
+                            <thead class="text-black">
+                                <tr>
+                                    <th scope="col ">Product</th>
+                                    <th scope="col">Details</th>
+                                    <th scope="col">Price</th>
+                                    <th scope="col">Qty</th>
+                                    <th scope="col">Subtotal</th>
+                                </tr>
+                            </thead>
+
+                            {% for item in basket_items %}
+                                <tr>
+                                    <td class="p-3 w-25">
+                                        <img class="img-fluid rounded border-black" src="{{ item.product.image.url }}">
+                                    </td>
+                                    <td class="py-3">
+                                        <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                                        <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
+                                    </td>
+                                    <td class="py-3">
+                                        <p class="my-0">${{ item.product.price }}</p>
+                                    </td>
+                                    <td class="py-3 w-25">
+                                        <p class="my-0">{{ item.quantity }}</p>
+                                    </td>
+                                    <td class="py-3">
+                                        <p class="my-0">${{ item.product.price }}</p>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                            <tr>
+                                <td colspan="5" class="pt-5 text-right">
+                                    <h6><strong>Basket Total: ${{ total|floatformat:2 }}</strong></h6>
+                                    <h6>Delivery: ${{ delivery|floatformat:2 }}</h6>
+                                    <h4 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
+                                    {% if free_delivery_delta > 0 %}
+                                        <p class="mb-1 text-danger">
+                                            You could get free delivery by spending just <strong>${{ free_delivery_delta }}</strong> more!
+                                        </p>
+                                    {% endif %}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="5" class="text-right">
+                                    <a href="{% url 'products' %}" class="btn btn-outline-black border-black basket-btn rounded-1 btn-lg">
+                                        <span class="icon">
+                                            <i class="fas fa-chevron-left text-black"></i>
+                                        </span>
+                                        <span class="text-uppercase">Keep Shopping</span>
+                                    </a>
+                                    <a href="" class="btn btn-black rounded-1 btn-lg basket-btn">
+                                        <span class="text-uppercase text-white">Secure Checkout</span>
+                                        <span class="icon">
+                                            <i class="fas fa-lock"></i>
+                                        </span>
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                {% else %}
+                    <p class="lead mb-5">Your basket is empty.</p>
+                    <a href="{% url 'products' %}" class="btn btn-outline-black border-black rounded-1 btn-lg bg-white">
+                        <span class="icon">
+                            <i class="fas fa-chevron-left"></i>
+                        </span>
+                        <span class="text-uppercase">Keep Shopping</span>
+                    </a>
+                {% endif %}
+            </div>
         </div>
     </div>
-</div>
-</div>
 {% endblock %}

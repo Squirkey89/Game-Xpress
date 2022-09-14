@@ -4,6 +4,7 @@ html {
 
 body {
     font-family: 'Lato';
+    min-height: calc(100vh - 246.71 - 417.91);
 }
 
 .text-black {
@@ -196,7 +197,7 @@ color: #ffff;
   font-size:15px;
   line-height: 24px;
   color:#737373;
-  
+    
 }
 
 .site-footer hr {
@@ -373,12 +374,9 @@ color: #ffff;
   .shop-now-button{
     margin-bottom: 25%;
   }
-  .basket-button1{
+  .basket-btn{
     font-size: 13px;
     padding-top: 8px;
-  }
-  .basket-button2{
-    font-size: 13px;
   }
 }
 @media (max-width: 1047px) {
@@ -467,12 +465,14 @@ i{
 }}
 
 
-.CartContainer {
+.basket{
   margin: auto;
   padding: 10px;
   border-radius: 20px;
   box-shadow: 5px 5px 10px 10px #20212233;
   height: auto;
+  background-color: #fbf7f7
+  ;
 }
 
 .shop {
