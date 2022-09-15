@@ -18,8 +18,9 @@ body {
   background: #33353d!important;
 }
 
-.btn-black {
+.btn-color {
   background: #33353d!important;
+  color: #fff;
 }
 
 ul {

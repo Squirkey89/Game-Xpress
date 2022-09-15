@@ -15,7 +15,7 @@
     <div class="container mb-5 basket mt-5">
         <div class="row">
             <div class="col">
-                <h2 class="logo-font mb-4 mt-5 ml-5">Shopping Basket</h2>
+                <h2 class="mb-4 mt-5 ml-5">Shopping Basket</h2>
                 <hr>
             </div>
         </div>
@@ -27,7 +27,7 @@
                         <table class="table table-sm table-borderless">
                             <thead class="text-black">
                                 <tr>
-                                    <th scope="col ">Product</th>
+                                    <th scope="col "></th>
                                     <th scope="col">Details</th>
                                     <th scope="col">Price</th>
                                     <th scope="col">Qty</th>
@@ -38,7 +38,7 @@
                             {% for item in basket_items %}
                                 <tr>
                                     <td class="p-3 w-25">
-                                        <img class="img-fluid rounded border-black" src="{{ item.product.image.url }}">
+                                        <img class="img-fluid rounded" src="{{ item.product.image.url }}">
                                     </td>
                                     <td class="py-3">
                                         <p class="my-0"><strong>{{ item.product.name }}</strong></p>
@@ -99,13 +99,13 @@
                             </tr>
                             <tr>
                                 <td colspan="5" class="text-right">
-                                    <a href="{% url 'products' %}" class="btn btn-outline-black border-black basket-btn rounded-1 btn-lg">
+                                    <a href="{% url 'products' %}" class="btn btn-outline-black border-black rounded-1 btn-lg">
                                         <span class="icon">
                                             <i class="fas fa-chevron-left text-black"></i>
                                         </span>
                                         <span class="text-uppercase">Keep Shopping</span>
                                     </a>
-                                    <a href="" class="btn btn-black rounded-1 btn-lg basket-btn">
+                                    <a href="{% url 'checkout' %}" class="btn btn-black rounded-1 btn-lg btn-color">
                                         <span class="text-uppercase text-white">Secure Checkout</span>
                                         <span class="icon">
                                             <i class="fas fa-lock"></i>
