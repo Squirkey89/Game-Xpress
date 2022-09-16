@@ -2,6 +2,10 @@
 {% load static %}
 {% load basket_tools %}
 
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
+{% endblock %}
+
 {% block page_header %}
 <div class="container header-container">
     <div class="row">
@@ -15,7 +19,7 @@
     <div class="container mb-5 basket mt-5">
         <div class="row">
             <div class="col">
-                <h2 class="mt-5 ml-5">Shopping Basket</h2>
+                <h2 class="mt-5 ml-5">Checkout</h2>
                 <hr>
             </div>
         </div>
@@ -78,16 +82,21 @@
 							{% endif %}
 						</div>
                     </fieldset>
-                
 
+                    <fieldset class="px-3">
+                        <legend class="fieldset-label small text-black px-2 w-auto">Payment</legend>
+                        <!-- A Stripe card element will go here -->
+                        <div class="mb-3" id="card-element"></div>
+                    </fieldset>
+                    
                     <div class="submit-button text-right mt-5 mb-2">                    
 						<a href="#" class="btn btn-outline-black border-black rounded-1">
 							<span class="icon">
-								<i class="fas fa-chevron-left"></i>
+								<i class="fas fa-chevron-left text-black"></i>
 							</span>
-							<span class="font-weight-bold">Adjust Bag</span>
+							<span class="font-weight-bold">Edit Bag</span>
 						</a>
-						<button id="submit-button" class="btn btn-color rounded-1 text-white">
+						<button id="submit-button" class="btn btn-black rounded-1 text-white">
 							<span class="font-weight-bold">Complete Order</span>
 							<span class="icon">
 								<i class="fas fa-lock"></i>
@@ -105,3 +114,12 @@
         </div>
     </div>
 {% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    {{ stripe_public_key|json_script:"id_stripe_public_key" }}
+    {{ client_secret|json_script:"id_client_secret" }}
+    <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
+{% endblock %}
+
+
