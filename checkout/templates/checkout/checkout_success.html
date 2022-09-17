@@ -20,7 +20,6 @@
     <div class="row">
         <div class="col">
             <h2 class="text-center mt-5">Thank you for making an order!</h2>
-            <i class="fa-sharp fa-solid fa-circle-check"></i>
             <p class="text-center">A confirmation email has been sent to the email address
                 <strong>{{ order.email }}</strong></p>
             <p class="text-center basket-1">Your order confirmation number: <strong
@@ -82,7 +81,16 @@
                     <p class="mb-0">{{ order.street_address1 }}</p>
                 </div>
             </div>
-
+            {% if order.street_address2 %}
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <p class="mb-0 text-black font-weight-bold">Street Address 2</p>
+                </div>
+                <div class="col-12 col-md-8 text-md-right">
+                    <p class="mb-0">{{ order.street_address2}}</p>
+                </div>
+            </div>
+            {% endif %}
             <div class="row">
                 <div class="col-12 col-md-4">
                     <p class="mb-0 text-black font-weight-bold">Town or City</p>
