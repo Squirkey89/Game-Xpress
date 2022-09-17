@@ -416,6 +416,10 @@ color: #ffff;
   overflow-y: auto;
 }
 
+.confirmation{
+  box-shadow: none;
+}
+
 /* MailChimp */
 #mc_embed_signup{
   background:#26272b; 
@@ -467,6 +471,7 @@ i{
   font-size: 14px;
 }
 
+
 }
 
 @media (max-width: 830px) {
@@ -505,7 +510,11 @@ i{
 @media (max-width: 490px) {
   .shop-now-button{
     margin-bottom: 5%;
-}}
+}
+  .order-num{
+    font-size: 12px;
+  }
+}
 
 @media (max-width: 430px) {
   #mc_embed_signup{
@@ -522,8 +531,9 @@ i{
 }
 .nav-link{
   padding: 0.15rem;
-}}
+}
 
+}
 
 .basket{
   margin: auto;
@@ -531,10 +541,16 @@ i{
   border-radius: 20px;
   box-shadow: 5px 5px 10px 10px #20212233;
   height: auto;
-  /* background-color: #fbf7f7 */
-  background-color: #f8f9fa
-
-  ;
+  background-color: #f8f9fa;
+}
+.basket-1{
+  margin: auto;
+  max-width: 690px;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px 10px #20212233;
+  height: auto;
+  background-color: #f8f9fa;
 }
 
 .shop {
