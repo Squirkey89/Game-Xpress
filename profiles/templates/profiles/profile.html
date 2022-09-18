@@ -58,7 +58,7 @@
                                         <ul class="list-unstyled">
                                             {% for item in order.lineitems.all %}
                                                 <li class="small">
-                                                    Qty: {{ item.product.name }} | €{{ item.quantity }}
+                                                    Qty:{{ item.quantity }} | {{ item.product.name }} 
                                                 </li>
                                             {% endfor %}
                                         </ul>
