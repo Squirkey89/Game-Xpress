@@ -84,7 +84,7 @@
               {% if request.user.is_superuser %}
               <a href="" class="dropdown-item">Product Management</a>
               {% endif %}
-              <a href="" class="dropdown-item">My Profile</a>
+              <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
               <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
               {% else %}
               <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
@@ -119,20 +119,6 @@
         {% include 'includes/mobile-top-header.html' %}
         {% include 'includes/main-nav.html' %}
       </nav>
-    </div>
-    <div style="width: 100%;" class="bg-white">
-      <div class="text-center bg-white delivery-banner">
-        <div class="bg-white text-white banner-content">
-          <h4 class="banner-text text-uppercase">Free delivery on
-            orders over {{ free_delivery_threshold }}! <i class="fas fa-truck fa-1x" aria-hidden="true"></i></h4>
-          <button class="banner-close" type="button">
-            <span class="material-icons">
-              close
-            </span>
-          </button>
-
-        </div>
-      </div>
     </div>
 
   </header>
@@ -252,8 +238,6 @@
     </div>
   </footer>
 
-
-
   <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
   <script type="text/javascript">
     (function ($) {
@@ -274,12 +258,6 @@
     }(jQuery));
     var $mcj = jQuery.noConflict(true);
   </script>
-  <script type="text/javascript">
-    document.querySelector(".banner-close").addEventListener("click", function () {
-      this.closest(".delivery-banner").style.display = "none";
-    })
-  </script>
-
 </body>
 
 </html>

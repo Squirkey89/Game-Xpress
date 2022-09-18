@@ -169,13 +169,23 @@
                     <p class="mb-5">€{{ order.grand_total }}</p>
                 </div>
                 <tr>
-                    <div class="col-12 mb-5">                        
-                    <a href="{% url 'home' %}" class="btn btn-outline-black border-black bg-background rounded-1 float-right">
+                    <div class="col-12 mb-5">
+                        {% if from_profile %}                        
+                    <a href="{% url 'profile' %}" class="btn btn-outline-black border-black bg-background rounded-1 float-right">
                             <span class="icon">
                                 <i class="fas fa-chevron-left text-white"></i>
                             </span>
-                            <span class="text-uppercase text-white">Home</span>
+                            <span class="text-uppercase text-white">Profile</span>
                         </a>
+                        {% else %}
+                        <a href="{% url 'profile' %}" class="btn btn-outline-black border-black bg-background rounded-1 float-right">
+                            <span class="icon">
+                                <i class="fas fa-chevron-left text-white"></i>
+                            </span>
+                            <span class="text-uppercase text-white">Profile</span>
+                        </a>
+                        {% endif %}
+
                 </tr>
             </div>
         </div>

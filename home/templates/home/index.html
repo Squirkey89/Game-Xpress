@@ -11,6 +11,20 @@
 
 
 {% block content %}
+<div style="width: 100%;" class="bg-white">
+  <div class="text-center bg-white delivery-banner">
+    <div class="bg-white text-white banner-content">
+      <h4 class="banner-text text-uppercase">Free delivery on
+        orders over {{ free_delivery_threshold }}! <i class="fas fa-truck fa-1x" aria-hidden="true"></i></h4>
+      <button class="banner-close" type="button">
+        <span class="material-icons">
+          close
+        </span>
+      </button>
+
+    </div>
+  </div>
+</div>
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -56,4 +70,13 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+<script type="text/javascript">
+  document.querySelector(".banner-close").addEventListener("click", function () {
+    this.closest(".delivery-banner").style.display = "none";
+  })
+</script>
 {% endblock %}

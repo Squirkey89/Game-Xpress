@@ -13,7 +13,7 @@ from django_countries.fields import CountryField
 
 class UserProfile(models.Model):
     
-    default_user = models.OneToOneField(User, on_delete=models.CASCADE)
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
     default_phone_number = models.CharField(max_length=20, null=False, blank=False)
     default_street_address1 = models.CharField(max_length=80, null=False, blank=False)
     default_street_address2 = models.CharField(max_length=80, null=True, blank=True)
@@ -27,11 +27,11 @@ class UserProfile(models.Model):
         return self.user.username
 
 
-# @receiver(post_save, sender=User)
-# def create_or_update_user_profile(sender, instance, created, **kwargs):
-#     """
-#     Create or update the user profile
-#     """
-#     if created:
-#         UserProfile.objects.create(user=instance)
-#     instance.userprofile.save()
+@receiver(post_save, sender=User)
+def create_or_update_user_profile(sender, instance, created, **kwargs):
+    """
+    Create or update the user profile
+    """
+    if created:
+        UserProfile.objects.create(user=instance)
+    instance.userprofile.save()
