@@ -26,7 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-ofr+xp8&*ac%m7smn)7di6z81yy10mt*_f!pbuaghopwt7+_l2'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'DEVELOPMENT' in os.environ
+DEBUG = True
 
 ALLOWED_HOSTS = ['gamexpress.herokuapp.com', 'localhost']
 
@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'basket',
     'checkout',
     'profiles',
+    'discount',
 
     'crispy_forms',
     'storages',
