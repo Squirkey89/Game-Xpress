@@ -99,6 +99,23 @@
                     {% endfor %}
                     <tr>
                         <td colspan="5" class="text-right" >
+                            <form action="{% url 'add_coupon' %}" method='POST' class="mb-2">
+                                {% csrf_token %}
+                                <div class="input-group coupon-form"><input type="text" name="coupon-code" placeholder="Enter Discount Code"
+                                        class="form-control" maxlength="10">
+                                    <span class="input-group-append"> <button
+                                            class="btn rounded-1 btn-black text-white">Redeem</button> </span>
+                            </form>
+                        </td>
+                    </tr>
+                            <tr>
+                        <td colspan="5" class="text-right">
+                            {% if coupon %}
+                            <h6>Discount code: {{ coupon }}</h6>
+                            <h6>Savings: €{{ savings|floatformat:2 }} - {{ coupon_amount }}% off</h6>
+                            <hr>
+                            {% endif %}
+                           
                             <h6 class="mt-2"><strong>Basket Total: €{{ total|floatformat:2 }}</strong></h6>
                             <h6>Delivery: €{{ delivery|floatformat:2 }}</h6>
                             <hr>
