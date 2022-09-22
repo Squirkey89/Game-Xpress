@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404
 from django.contrib import messages
 from django.views.decorators.http import require_http_methods
+from .models import Coupon
 from django.contrib.auth.decorators import login_required
 
 
@@ -68,3 +69,22 @@ def remove_from_basket(request, item_id):
     except Exception as e:
         messages.error(request, f'Error removing item: {e}')
         return HttpResponse(status=500)
+
+@require_http_methods(["GET", "POST"])
+def add_coupon(request):
+    code = request.POST.get('coupon-code')
+
+    if not code:
+        messages.error(request, "You didn't enter a coupon code!")
+        return redirect(reverse('view_basket'))
+
+    try:
+        coupon = Coupon.objects.get(code=code)
+        request.session['coupon_id'] = coupon.id
+        messages.success(request, f'Coupon code: { code } has been applied')
+    except Coupon.DoesNotExist:
+        request.session['coupon_id'] = None
+        messages.warning(request, f'Coupon code: { code } not accepted')
+        return redirect('view_basket')
+    else:
+        return redirect('view_basket')

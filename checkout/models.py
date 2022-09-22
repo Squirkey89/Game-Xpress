@@ -61,11 +61,6 @@ class Order(models.Model):
         self.grand_total = self.order_total + self.delivery_cost
         self.save()
 
-        if self.coupon is not None:
-            savings = self.order_total * (self.coupon.amount / Decimal("100"))
-            self.order_total = self.order_total - savings
-
-        self.save()
 
     def save(self, *args, **kwargs):
         """
