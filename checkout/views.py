@@ -1,7 +1,10 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
 from django.views.decorators.http import require_POST
 from django.contrib import messages
-from django.conf import settings
+from django.views.generic import View
+
+
+
 
 from .forms import OrderForm
 from .models import Order, OrderLineItem
@@ -9,6 +12,7 @@ from products.models import Product
 from basket.contexts import basket_contents
 from profiles.forms import UserProfileForm
 from profiles.models import UserProfile
+from django.conf import settings
 
 
 import stripe
@@ -37,7 +41,7 @@ def checkout(request):
 
     if request.method == 'POST':
         basket = request.session.get('basket', {})
-
+    
         form_data = {
             'full_name': request.POST['full_name'],
             'email': request.POST['email'],
@@ -122,6 +126,7 @@ def checkout(request):
         'order_form': order_form,
         'stripe_public_key': stripe_public_key,
         'client_secret': intent.client_secret,
+    
     }
 
     return render(request, template, context)

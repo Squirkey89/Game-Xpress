@@ -165,12 +165,12 @@
         </div>
 
         <div class="col-xs-6 col-md-3">
-          <h6>Quick Links</h6>
+          <h6 class="text-center">Quick Links</h6>
           <ul class="footer-links">
-            <li><a href="">All Products</a></li>
-            <li><a href="">Playstation</a></li>
-            <li><a href="">Xbox</a></li>
-            <li><a href="">Nintendo</a></li>
+            <li><a href="{% url 'products' %}">All Products</a></li>
+            <li><a href="{% url 'products' %}?category=ps5_games">Playstation</a></li>
+            <li><a href="{% url 'products' %}?category=xbox_series_x/s">Xbox</a></li>
+            <li><a href="{% url 'products' %}?category=nintendo_games">Nintendo</a></li>
             <li><a href="">Privacy Policy</a></li>
           </ul>
         </div>

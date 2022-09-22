@@ -1,6 +1,7 @@
 from django.contrib import admin
 from .models import Order, OrderLineItem
 
+
 class OrderLineItemAdminInline(admin.TabularInline):
     """
     The items instances are displayed as line items
@@ -35,3 +36,4 @@ class OrderAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Order, OrderAdmin)
+
