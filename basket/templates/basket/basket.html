@@ -11,6 +11,19 @@
 {% endblock %}
 
 {% block content %}
+<div style="width: 100%;" class="bg-white">
+    <div class="text-center bg-white delivery-banner">
+      <div class="bg-white text-white banner-content">
+        <h4 class="banner-text">Use code <strong>"TENOFF10"</strong> for  10%  off your order! <i class="fas fa-tags fa-1x" aria-hidden="true"></i></h4>
+        <button class="banner-close" type="button">
+          <span class="material-icons">
+            close
+          </span>
+        </button>
+  
+      </div>
+    </div>
+  </div>
 <div class="overlay"></div>
 <div class="container mb-5 basket mt-5">
     <div class="row">
@@ -112,11 +125,11 @@
                         <td colspan="5" class="text-right">
                             {% if coupon %}
                             <h6>Discount code: {{ coupon }}</h6>
-                            <h6>Savings: €{{ savings|floatformat:2 }} - {{ coupon_amount }}% off</h6>
-                            <hr>
+                            <h6>{{ coupon_amount }}% off your order</h6>
+                            <h6>Savings: €{{ savings|floatformat:2 }}</h6>
                             {% endif %}
-                           
-                            <h6 class="mt-2"><strong>Basket Total: €{{ total|floatformat:2 }}</strong></h6>
+                            <hr>
+                           <h6><strong>Basket Total: €{{ total|floatformat:2 }}</strong></h6>
                             <h6>Delivery: €{{ delivery|floatformat:2 }}</h6>
                             <hr>
                             <h4 class="mt-4"><strong>Grand Total: €{{ grand_total|floatformat:2 }}</strong></h4>
@@ -193,5 +206,10 @@
                 location.reload();
             });
     })
+</script>
+    <script type="text/javascript">
+  document.querySelector(".banner-close").addEventListener("click", function () {
+    this.closest(".delivery-banner").style.display = "none";
+  })
 </script>
 {% endblock %}

@@ -7,6 +7,7 @@ from django.conf import settings
 from products.models import Product
 from profiles.models import UserProfile
 from basket.models import Coupon
+from decimal import Decimal
 
 
 from django_countries.fields import CountryField
@@ -35,12 +36,15 @@ class Order(models.Model):
     original_basket = models.TextField(
         null=False, blank=False, default=''
     )
-    coupon = models.ForeignKey(
-        Coupon, on_delete=models.SET_NULL, null=True, blank=True)
     stripe_pid = models.CharField(
         max_length=254, null=False,
         blank=False, default=''
     )
+    coupon = models.ForeignKey(
+        Coupon, on_delete=models.SET_NULL, null=True, blank=True)
+    order_total = models.DecimalField(
+        max_digits=10, decimal_places=2, null=False, default=0)
+        
         
     def _generate_order_number(self):
         """
@@ -59,6 +63,12 @@ class Order(models.Model):
         else:
             self.delivery_cost = 0
         self.grand_total = self.order_total + self.delivery_cost
+        self.save()
+        
+        if self.coupon is not None:   
+            savings = self.order_total * (self.coupon.amount / Decimal("100"))
+            self.order_total = self.order_total - savings
+
         self.save()
 
 

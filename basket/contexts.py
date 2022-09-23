@@ -7,7 +7,7 @@ from .models import Coupon
 
 
 def basket_contents(request):
-    coupon_id = request.session.get('discount_id', int())
+    coupon_id = request.session.get('coupon_id', int())
 
     basket_items = []
     total = 0
