@@ -148,6 +148,7 @@ color: #ffff;
   width: 100%;
   height: 65px;
   padding: 0px;
+  
 }
 .banner{
   left: 0;
@@ -168,9 +169,6 @@ color: #ffff;
 
 .banner-text {
   width: 100%;
-  flex-grow: 1;
-  line-height: 1.4;
-  font-size: 2vw;
 
 }
 
@@ -505,10 +503,14 @@ color: #ffff;
 }
 
 .coupon-form{
-  width: 16.5em;
+  width: 16em;
   float: right;
-  margin-top: 3em;
+  margin-bottom: -3em;
+  height: 12px;
+  border-radius: 6px;
+  
 }
+
 
 .allauth-form-inner-content button:hover,
 .allauth-form-inner-content input[type='submit']:hover {	
@@ -547,7 +549,8 @@ color: #17a2b8; /* text-info */
 .nav-link{
   padding: .75rem;
 }}
-@media (max-width:992px) {
+
+@media (max-width: 991px)  {
   .site-footer [class^=col-]
   {
     margin-bottom:30px
@@ -565,18 +568,53 @@ color: #17a2b8; /* text-info */
 i{
   font-size: 14px;
 }
+  .header-container {
+      padding-top: 0px;
+  }
 
+  .display-4.logo-font.text-black {
+      font-size: 2rem;
+  }
 
+  .nav-link {
+      padding: 0.15rem;
+  }
+
+  .nav-link i.fa-lg {
+      font-size: 1rem;
+  }
+
+  .navbar-toggler {
+      padding: .6rem .6rem;
+      font-size: 1rem;
+  }
+
+  .delivery-banner{
+      
+      height: 50px;
+  }
+
+  .btn.btn-outline-black.rounded-0,
+  .btn.btn-black.rounded-0 {
+      padding: .375rem .375rem;
+  }
+
+  .btn.btn-outline-black.rounded-0.btn-lg,
+  .btn.btn-black.rounded-0.btn-lg {
+      padding: .375rem .375rem;
+      font-size: .75rem;
+  }
+
+  .increment-qty, .decrement-qty {
+      padding: .25rem .5rem !important;
+  }
 }
-
 @media (max-width: 830px) {
   #mc_embed_signup{
       width: 370px;}
 
 .banner-text {
   width: 100%;
-  flex-grow: 1;
-  line-height: 1.4;
   font-size: 1rem;
 }}
 
@@ -594,6 +632,9 @@ i{
     display:block;
     margin-right:0;
     font-weight:600
+  }
+  .button{
+    font-size:11px;
   }
 }
 @media (max-width: 650px) {
@@ -620,9 +661,7 @@ i{
 @media (max-width: 424px) {
 .banner-text {
   width: 100%;
-  flex-grow: 1;
-  line-height: 1.4;
-  font-size: 3.4vw;
+  font-size: 0.7rem;
 }
 .nav-link{
   padding: 0.15rem;
@@ -652,3 +691,4 @@ i{
   background-color: #33353d;
   color:#fff;
 }
+

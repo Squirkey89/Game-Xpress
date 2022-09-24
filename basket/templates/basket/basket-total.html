@@ -1,0 +1,17 @@
+{% if coupon %}
+<hr>
+<h6>Discount code: {{ coupon }}</h6>
+<h6>{{ coupon_amount }}% off your order</h6>
+<h6>Savings: €{{ savings|floatformat:2 }}</h6>
+{% endif %}
+<hr>
+<h6><strong>Basket Total: €{{ total|floatformat:2 }}</strong></h6>
+<h6>Delivery: €{{ delivery|floatformat:2 }}</h6>
+<hr>
+<h4 class="mt-4"><strong>Grand Total: €{{ grand_total|floatformat:2 }}</strong></h4>
+{% if free_delivery_delta > 0 %}
+<p class="mb-1 text-danger">
+    You could get free delivery by spending just <strong>€{{ free_delivery_delta }}</strong>
+    more!
+</p>
+{% endif %}
