@@ -82,7 +82,13 @@
                         <div class="card-footer bg-white pt-0 border-0 text-left">
                             <div class="row">
                                 <div class="col">
-                                    <p class="lead mb-0 text-left font-weight-bold">€{{ product.price }}</p>
+                                    <p class="lead mb-0 text-left font-weight-bold">€{{ product.price }}</p><form class="form float-right" action="{% url 'add_to_favourite' product.id %}" method="POST">
+                                {% csrf_token %}
+                                <button type="submit" class="heart-btn text-center" data-toggle="tooltip" data-placement="top" title="Add to favourites">
+                                    <i class="fas fa-heart fa-lg"></i>
+                                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                                </button>
+                            </form>
                                     {% if product.category %}
                                     <p class="small mt-1 mb-0">
                                         <a class="text-muted"
