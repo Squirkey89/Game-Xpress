@@ -15,63 +15,88 @@
 <div class="container mb-5 basket mt-5">
     <div class="row">
         <div class="col">
-            <h2 class="mb-4 mt-5 ml-5 text-center">Favourites</h2>
+            <h2 class="mb-4 mt-5 text-center">Favourites</h2>
             <hr>
         </div>
     </div>
     <div class="row">
         <div class="col">
             {% if favourite.products.all %}
-            <div class="table-responsive rounded d-none d-md-block">
+            <div class="d-block d-md-none">
+                {% for favourite in favourite.products.all %}
+                    <div class="row">
+                        <div class="col-12 col-sm-6 mb-2">
+                           {% include "favourite/favourite-image.html" %}                        
+                        </div>
+                        <div class="col-12 col-sm-6 mb-2">
+                            {% include "favourite/favourite-description.html" %}
+                        </div>
+                        <div class="col-12 col-sm-6 order-sm-last">
+                            <p class="my-0">Price:{{ favourite.price }}</p>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <a class="btn btn-outline-black btn-black rounded-1 text-white" href="{% url 'remove_favourite' favourite.id %}">Remove</a>
+                        </div>
+                    </div>
+                    <div class="row"><div class="col mb-4"><hr></div></div>
+                {% endfor %}
+                    
+            </div>
+                <div class="table-responsive rounded d-none d-md-block">
+            <div class="table-responsive rounded">
                 <table class="table table-sm table-borderless">
-                    <thead class="text-black">
+                    <thead>
                         <tr>
+                            <th scope="col"></th>
+                            <th scope="col"></th>
+                            <th scope="col"></th>
                             <th scope="col"></th>
                             <th scope="col"></th>
                         </tr>
                     </thead>
-                        {% for favourite in favourite.products.all %}
-                        <td class="py-3 w-25">
-                        {% include "favourite/favourite-image.html" %}
-                    </td>
-                    <td class="py-3">
-                        {% include "favourite/favourite-description.html" %}
-                    </td>
-                    <td class="py-3">
-                        <p class="my-0">Price: <br>€{{ favourite.price }}</p>
-                    </td>
-                    <td class="py-3 w-10 pl-4 mt-5">
-                        
-                        <a class="btn btn-outline-black text-white btn-black" href="#">Remove</a>
-                    </td>
-                    </tr>
-                    {% endfor %}
-                    <tr>
-                        <td class="text-right" colspan="5">
-                            <a href="{% url 'products' %}" class="btn btn-outline-black border-black rounded-1 btn-lg mb-5 ml-5 bg-white">
-                                <span class="icon">
-                                    <i class="fas fa-chevron-left text-black"></i>
-                                </span>
-                                <span class="text-uppercase">Keep Browsing</span>
-                            </a> </td>
-                    </tr>
-                    {% else %}
-                    <p class="lead mb-5 ml-5">Your favourites is empty.</p>
-                <hr>
-                <a href="{% url 'products' %}"
-                    class="btn btn-outline-black border-black rounded-1 btn-lg mb-5 ml-5 bg-white">
-                    <span class="icon">
-                        <i class="fas fa-chevron-left text-black"></i>
-                    </span>
-                    <span class="text-uppercase">Keep Shopping</span>
-                </a>
-                    {% endif %}                
-                </table>
-            </div>
+                    {% for favourite in favourite.products.all %}
+                    <td class="py-3 w-25">
+                    {% include "favourite/favourite-image.html" %}
+                </td>
+                <td class="py-3">
+                    {% include "favourite/favourite-description.html" %}
+                </td>
+                <td class="py-3">
+                    <p class="my-0">Price: <br>€{{ favourite.price }}</p>
+                </td>
+                <td class="py-3 w-10 pl-4 mt-5">
+
+                    <a class="btn btn-outline-black text-white btn-black" href="{% url 'remove_favourite' favourite.id %}">Remove</a>
+                </td>
+                </tr>
+                {% endfor %}
+                <tr>
+                    <td class="text-right" colspan="5">
+                        <a href="{% url 'products' %}" class="btn btn-outline-black border-black rounded-1 btn-lg mb-5 ml-5 bg-white">
+                            <span class="icon">
+                                <i class="fas fa-chevron-left text-black"></i>
+                            </span>
+                            <span class="text-uppercase">Keep Browsing</span>
+                        </a> </td>
+                </tr>
+                {% else %}
+                <p class="lead mb-5 ml-5">Your favourites is empty.</p>
+            <hr>
+            <a href="{% url 'products' %}"
+                class="btn btn-outline-black border-black rounded-1 btn-lg mb-5 ml-5 bg-white">
+                <span class="icon">
+                    <i class="fas fa-chevron-left text-black"></i>
+                </span>
+                <span class="text-uppercase">Keep Shopping</span>
+            </a>
+                {% endif %}                
+            </table>
         </div>
     </div>
 </div>
 </div>
 </div>
 </div>
+</div>
 {% endblock %}
+

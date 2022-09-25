@@ -36,3 +36,15 @@ def add_to_favourite(request, item_id):
     messages.info(request, f'{product.name} was added to your favourites')
 
     return redirect(redirect_url)
+
+
+@login_required
+def remove_favourite(request, item_id):
+
+    favourites = Favourite.objects.get(user=request.user)
+    product = get_object_or_404(Product, pk=item_id)
+
+    favourites.products.remove(product)
+    messages.info(request, f'{product.name} has been removed from your favourites')
+
+    return redirect(reverse('favourite'))
