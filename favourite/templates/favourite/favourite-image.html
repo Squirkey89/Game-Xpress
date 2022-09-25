@@ -1,0 +1,6 @@
+{% if favourite.image %}
+<img class="img-fluid rounded" src="{{ favourite.image.url }}" alt="{{ favourite.name }}">
+{% else %}
+<img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.png" alt="{{ favourite.name }}">
+{% endif %}
+

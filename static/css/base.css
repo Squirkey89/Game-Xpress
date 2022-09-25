@@ -692,3 +692,9 @@ i{
   color:#fff;
 }
 
+
+.heart-btn {
+  margin-right: 40px;
+  border: none;
+  background: none;
+}
