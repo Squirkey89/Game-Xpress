@@ -84,7 +84,7 @@
                                 <div class="col">
                                     <p class="lead mb-0 text-left font-weight-bold">€{{ product.price }}</p><form class="form float-right" action="{% url 'add_to_favourite' product.id %}" method="POST">
                                 {% csrf_token %}
-                                <button type="submit" class="heart-btn text-center" data-toggle="tooltip" data-placement="top" title="Add to favourites">
+                                <button type="submit" class="heart-btn2 text-center" data-toggle="tooltip" data-placement="top" title="Add to favourites">
                                     <i class="fas fa-heart fa-lg"></i>
                                     <input type="hidden" name="redirect_url" value="{{ request.path }}">
                                 </button>

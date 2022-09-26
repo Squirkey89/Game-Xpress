@@ -642,6 +642,9 @@ i{
   {
     font-size: 0.7em; 
   }
+  .mobile-button{
+    font-size: 100px;
+  }
 }
 @media (max-width: 490px) {
   .shop-now-button{
@@ -693,8 +696,20 @@ i{
 }
 
 
-.heart-btn {
+.heart-btn1 {
   margin-right: 40px;
   border: none;
   background: none;
+}
+.heart-btn2 {
+  margin-right: 40px;
+  background: none;
+  padding: 2px;
+  height: 24px;
+  border-radius: 7px;
+}
+
+.heart-btn2:hover {
+    transform: scale(1.1);
+    color: #fff;
 }

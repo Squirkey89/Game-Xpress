@@ -40,7 +40,11 @@
                     </div>
                     <div class="row"><div class="col mb-4"><hr></div></div>
                 {% endfor %}
-                    
+                <div>
+                    <button id="scrollToTopBtn">
+                        <i class="fas fa-arrow-up text-white mx-auto my-auto"></i>
+                    </button>
+                </div>
             </div>
                 <div class="table-responsive rounded d-none d-md-block">
             <div class="table-responsive rounded">
@@ -100,3 +104,12 @@
 </div>
 {% endblock %}
 
+{% block postloadjs %}
+{{ block.super }}
+<script type="text/javascript">
+    var scrollToTopBtn = document.querySelector("#scrollToTopBtn")
+    scrollToTopBtn.addEventListener("click", function () {
+        window.scrollTo(0, 0);
+    });
+</script>
+{% endblock %}
