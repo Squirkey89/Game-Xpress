@@ -17,9 +17,10 @@ class Category(models.Model):
     def get_friendly_name(self):
         return self.friendly_name
 
+
 class Product(models.Model):
     category = models.ForeignKey(
-        'Category',null=True, 
+        'Category', null=True, 
         blank=True, on_delete=models.SET_NULL
         )
     sku = models.CharField(
@@ -53,9 +54,8 @@ class Review(models.Model):
         null=False,
         blank=False
         )
-    User = models.ForeignKey(User, 
-        on_delete=models.CASCADE
-        )
+    user = models.ForeignKey(User, 
+                             on_delete=models.CASCADE)
     product = models.ForeignKey(
         Product,
         on_delete=models.CASCADE
@@ -64,10 +64,9 @@ class Review(models.Model):
         auto_now_add=True
         )
     review = models.TextField(null=True, 
-        blank=False
-        )
-    rating = models.IntegerField(default=0, 
-                    validators=[
+                              blank=False
+                              )
+    rating = models.IntegerField(default=0, validators=[
                     MinValueValidator(1),
                     MaxValueValidator(5)])
    

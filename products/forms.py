@@ -2,7 +2,7 @@
 Forms for product app
 """
 from django import forms
-from .models import Product, Category
+from .models import Product, Category, Review
 from .widgets import CustomClearableFileInput
 
 
@@ -29,3 +29,20 @@ class ProductForm(forms.ModelForm):
         self.fields['category'].choices = friendly_names
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'border-black rounded-1'
+
+
+class ReviewForm(forms.ModelForm):
+    """
+    Form for users to create reviews and ratings for products.
+    """
+    class Meta:
+       """
+        To define the Review model and which fields to exclude.
+       """
+    model = Review
+    fields = (
+            'title',
+            'user'
+            'review',
+            'rating',
+        )
