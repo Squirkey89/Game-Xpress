@@ -36,13 +36,13 @@ class ReviewForm(forms.ModelForm):
     Form for users to create reviews and ratings for products.
     """
     class Meta:
-       """
+        """
         To define the Review model and which fields to exclude.
-       """
-    model = Review
-    fields = (
-            'title',
-            'user'
-            'review',
-            'rating',
+        """
+        model = Review
+        fields = (
+                'title',
+                'review',
+                'rating',
         )
+    

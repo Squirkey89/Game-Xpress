@@ -106,35 +106,74 @@
                         </div>
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                     </div>
-                </form>
-            </div>
-            <div class="row">
-                <div class="w-100">
-                    <form action="#" method="POST">
-                        {% csrf_token %}
-                        <h5>Write Your Review</h5>
 
-                        <div>
-                            <label>How do you rate this product?</label>
-                            <br>
-                            Review Title:
-                            <input type="text" class="form-control" name="subject">
-                            <br>
-                            Review:
-                            <textarea name="review" rows="4" class="form-control"></textarea>
-                            <br>
-                            <input type="submit" value="Submit Review" class="btn btn-black text-white">
-                        </div>
-                    </form>
-                </div>
+                </form>
             </div>
         </div>
     </div>
 </div>
-{% endblock %}
+<hr>
+<div class="row">
+    <div class="col-lg-6 offset-md-6 mx-auto col-md-10 offset-md-2 col-sm-10 offset-sm-2 w-75">
+        <div>
+            <form action="{% url 'add_review' product.id %}" method="POST">
+                {% csrf_token %}
+                <h5>Write Your Review</h5>
+                <hr>
+                Review Title:
+                <input type="text" class="form-control" name="title">
+                <br>
+                <label>How do you rate this product?</label>
+                <br>
+                <select name="rating" id="rating" class="custom-select form-control mb-3">
+                    <option value="5" selected="">5</option>
+                    <option value="4">4</option>
+                    <option value="3">3</option>
+                    <option value="2">2</option>
+                    <option value="1">1</option>
+                </select>
+                Review:
+                <textarea name="review" rows="4" class="form-control"></textarea>
+                <br>
+                <input type="submit" value="Submit Review" class="btn btn-black text-white">
+            </form>
+        </div>
+    </div>
+</div>
+<hr>
+<div class="col-lg-6 mx-auto col-md-10 offset-md-2 col-sm-10 offset-sm-2">
+    <h4>Customer Reviews</h4>
+    <div class="card mb-5">
+        {% if reviews %}
+        <div class="mb-3 comments">
+            {% for review in reviews %}
+            <div class="row">
+                <div class="col-6">
+                    <p class="text-black">{{review.title}}</p>
+                </div>
+                <div class="col-6">
+                    <p class="text-black text-right"><i class="fas fa-star" aria-hidden="true"></i>Ratings:
+                        {{review.rating}}/5</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <small class="text-black">{{review.user}} | {{ review.created_on }}</small>
+                </div>
+            </div>
+            <p class="mt-2">{{ review.review }}</p>
+            <hr>
+            {% endfor %}
+    </div>
+    {% else %}
+    <p class="fw-bold ml-4 mt-3">This product has no reviews yet.</p>
+    {% endif %}
+</div>
+</div>
+    {% endblock %}
 
-{% block postloadjs %}
-{{ block.super }}
-{% include 'products/includes/quantity_input_script.html' %}
+    {% block postloadjs %}
+    {{ block.super }}
+    {% include 'products/includes/quantity_input_script.html' %}
 
-{% endblock %}
+    {% endblock %}

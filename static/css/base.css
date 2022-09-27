@@ -710,6 +710,14 @@ i{
 }
 
 .heart-btn2:hover {
-    transform: scale(1.1);
-    color: #fff;
+  transform: scale(1.1);
+  color: #fff;
+}
+
+.review-form{
+  width: 100%;
+}
+.comments {
+  overflow: scroll;
+  padding: 12px;
 }
