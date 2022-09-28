@@ -61,9 +61,6 @@ li {
 .nav-text {
   color: #fff;
 }
-/* .{
-  padding: 0.15rem;
-} */
 
 /* Search bar input & button */
 /* From Bulma */
@@ -115,7 +112,8 @@ box-shadow: 2px 2px #c8c8c8, -0.3em 0 .2em #c8c8c8;
 
 .game-text{ 
     color: white;
-    font-size: 4vw;
+    font-size: 50px;
+    /* font-size: 6vw; */
     text-shadow: 3px 3px 3px black;
 
 }
@@ -612,6 +610,10 @@ i{
 @media (max-width: 830px) {
   #mc_embed_signup{
       width: 370px;}
+  .game-text{ 
+        color: white;
+        font-size: 40px;
+  }
 
 .banner-text {
   width: 100%;
@@ -636,6 +638,10 @@ i{
   .button{
     font-size:11px;
   }
+  .game-text{ 
+    color: white;
+    font-size: 27px;
+}
 }
 @media (max-width: 650px) {
   .font-a 
@@ -645,10 +651,20 @@ i{
   .mobile-button{
     font-size: 100px;
   }
+  .game-text{ 
+    color: white;
+    font-size: 27px;
+  }
+
+@media (max-width: 561px) {
+.game-text{ 
+  color: white;
+  font-size: 20px;
+}
+
 }
 @media (max-width: 490px) {
-  .shop-now-button{
-    margin-bottom: 5%;
+  .shop-now-button{ font-size: 15px;
 }
   .order-num{
     font-size: 12px;
@@ -658,6 +674,9 @@ i{
 @media (max-width: 430px) {
   #mc_embed_signup{
       width: 306px;
+} .carousel-item img{
+  width: auto;
+  height: 300px;  
 }}
 
 
@@ -669,7 +688,9 @@ i{
 .nav-link{
   padding: 0.15rem;
 }
-
+.site-footer{
+  text-align: center;
+}
 }
 
 .basket{
