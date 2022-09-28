@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /products/add/
+Disallow: /accounts/
+Disallow: /socialaccounts/
+Disallow: /basket/
+Disallow: /checkout/
+Disallow: /checkout/checkout_success/
+Disallow: /profile/
+Sitemap: https://gamexpress.herokuapp.com/sitemap.xml
