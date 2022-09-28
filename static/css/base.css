@@ -623,7 +623,9 @@ i{
 @media (max-width:767px) {
   .site-footer
   {
-    padding-bottom:0
+    padding-bottom:0;
+    text-align:center
+
   }
   .site-footer .copyright-text,.site-footer .social-icons
   {
@@ -716,29 +718,11 @@ i{
   color:#fff;
 }
 
-
-.heart-btn1 {
-  margin-right: 40px;
-  border: none;
-  background: none;
-}
-.heart-btn2 {
-  margin-right: 40px;
-  background: none;
-  padding: 2px;
-  height: 24px;
-  border-radius: 7px;
-}
-
-.heart-btn2:hover {
-  transform: scale(1.1);
-  color: #fff;
-}
-
 .review-form{
   width: 100%;
 }
 .comments {
   overflow: scroll;
-  padding: 12px;
+  padding: 16px;
+}
 }
