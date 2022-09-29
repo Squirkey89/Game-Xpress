@@ -12,7 +12,8 @@ The GameXpress website is a full-stack Django website built using Python, JavaSc
     * [Scope](#id-Scope)
     * [Structure](#id-Structure)
     * [Skeleton](#id-Skeleton)
-
+2. [Features](#id-features)
+3. [Features to Implement in the future](#id-implement)
  
 
 # UX<div id='id-ux'>
@@ -100,13 +101,55 @@ Below is a schema of the models used in this application, created with Lucidchar
 
 
 # Skeleton<div id='id-Skeleton'>
-![GameXpress 1](https://user-images.githubusercontent.com/91072896/193088620-f03a2887-165b-4416-b4b2-26fd77140022.png)
-![GameXpress 2](https://user-images.githubusercontent.com/91072896/193088606-a258b217-7082-4077-ba6b-a38a575bf3c8.png)
+
+## Wireframes
+  Balsamiq was used to create wireframes fot this project.
+[Wireframes 1](https://user-images.githubusercontent.com/91072896/193088620-f03a2887-165b-4416-b4b2-26fd77140022.png)
+[Wireframes 2](https://user-images.githubusercontent.com/91072896/193088606-a258b217-7082-4077-ba6b-a38a575bf3c8.png)
 
 
 
+# Features<div id='id-features'>
+
+## Navigation-bar<div id='id-nav'>
+The navigation bar is at the top of the website. This includes the website name which appears at the left of the nav bar. It also includes links to different categories that the user can visit. Theres a link to the basket, user profile and favourites at the top right of the navigation bar. There is also a search box in the center which can be used to search products. The navbar links change format to hamburger format if the website is viewed on smaller devices.&nbsp;
+![nav-bar](https://user-images.githubusercontent.com/91072896/193100438-caf4b61e-37d0-46eb-861e-a3346a62570b.png)
 
 
+## Home<div id='id-home'>
+The home page features three images on a carousel. These images show the customer the type of products to expect from the website. The user has the option to choose netween the three with a link to three different categories.&nbsp;
+![Home](https://user-images.githubusercontent.com/91072896/193098334-0217301e-1edb-49ba-a348-c3eb3845c55b.png)
+
+## Products<div id='id-products'>
+The products page displays the summary of each product the website sells.The products page contains product image, product name, category, price and favourites button. Each product can be clicked on to view the product in detail on another page. Products can also be filtered via different categories by rating price and ascending or descending order.&nbsp;
+![products](https://user-images.githubusercontent.com/91072896/193101055-05501abc-6e5d-43d4-9ea7-75d21792df35.png)
+
+## Product-detail<div id='id-product-detail'>
+The product detail page shows information of the product including; product title, price, category, and product description. The user can add products to their basket before checkout. The user can also add products to their favourites list. Below the product detail there is an area for submit and read users reviews.&nbsp;
+![product detail](https://user-images.githubusercontent.com/91072896/193102028-91f2e88a-4b51-4a8c-b07a-95b602c8b46b.png)
+![review](https://user-images.githubusercontent.com/91072896/193103476-55fbed49-a4d6-418b-aa1a-c556363157dd.png)
+
+## Basket<div id='id-basket'>
+Once the user goes to the basket page they can review there order. Thre is an option to increment or decrement quantity or remove the item completely. There is a discount code at the bottom of the page and a banner above the page with a valid code. When the user types this into the discount box they will receive 10% off there order. They will get the amount deducted from their total.&nbsp;
+![Basket](https://user-images.githubusercontent.com/91072896/193106655-8f9b0b0e-34c8-44ed-a46f-c53609483c6b.png)
+
+## Checkout<div id='id-checkout'>
+When the user is ready to proceed to the checkout page after selecting their choice of products. They will have to fill in their billing and delivery details before they confirm the purchase has been made. The user is signed up has the option to save their details for future purchases. This makes the experience much faster and a better experience for the customer.&nbsp;
+
+## Checkout-success<div id='id-checkout-success'>
+After users have placed their order, an order confirmation page is displayed with the summary of the order placed including; product details, personal information, order number and the email that is used to send the order confirmation to.&nbsp;
+![checkout success](https://user-images.githubusercontent.com/91072896/193108200-716d8a02-0a42-4118-a4ea-82d5f918e3e5.png)
+
+## User-Profile<div id='id-user-profile'>
+Registered users have an option to view their profile. This page is where the customer sets their personal information so this information is saved when the customer wants to go back to make a purchase. This also has a list of the users order history which they can view at any time.
+![User profile](https://user-images.githubusercontent.com/91072896/193109731-519d3e92-7165-4609-86e3-868fde9210fd.png)
+
+## Favourites<div id='id-favourites'>
+The favourites page is a page only available to users that have registered an account. These users have an option to add products to their favourites. The user can add a product that they may want to buy sometime in the future. The user can add as many items as they would like and they can aslo remove these products. 
+![Favourites](https://user-images.githubusercontent.com/91072896/193110282-605f094d-057f-4b2e-80e0-2c88717051ec.png)
 
 
-
+# Features to Implement in the future<div id='id-implement'>
+There are a lot of improvements I would make and features I could add to make the site better.
+  * The coupon code can currently be used by a customer as many times as they would like. I would change this to one code per customer. When creating the coupon I was going to make an expiry but decided against it.
+  * The favourites app can do almost everything but I would implement an add to basket buttn. This would allow the customer to easily purchase the item if its in their favourites.

@@ -679,6 +679,9 @@ i{
 @media (max-width: 490px) {
   .shop-now-button{ font-size: 15px;
 }
+.footer-site{
+  margin-right: 0;
+}
   .order-num{
     font-size: 12px;
   }
