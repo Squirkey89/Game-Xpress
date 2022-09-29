@@ -8,31 +8,12 @@ The GameXpress website is a full-stack Django website built using Python, JavaSc
 
 # Table of Contents
 1. [UX](#id-ux)
-2. [Scope](#id-scope)
-2. [Structure](#id-structure)
-    * [Wireframe](#id-wireframe)
-    * [Database Schema](#id-Database-Schema)
-3. [Features](#id-features)
-    * [Navigation-bar ](#id-nav)
-    * [Banner/About](#id-banner) 
-    * [How It Works](#id-works)
-    * [Recipes](#id-recipes)
-    * [Recipes Details](#id-details)
-    * [Create/Edit recipe](#id-create/edit)
-    * [Edit/Delete recipe](#id-edit/delete)
-    * [Comments](#id-comments)
-    * [Like Button](#id-like)
-    * [Sign Up/Login](#id-login)
-    * [Footer](#id-footer)
-4. [Features to Implement in the future](#id-implement)
-5. [Testing](#id-testing) 
-6. [Bugs](#id-bugs) 
-7. [Technologies Used](#id-technologies)
-8. [Deployment](#id-deployment)
-9. [Credits](#id-credits)
-10. [Acknowledgements](#id-acknowledgements)
+
 
 # UX<div id='id-ux'>
+
+the project was broken up into Epics. These Epics roughly translate to apps within the Django project. Each User Story was added to it's relevant Epic, and each User Story was further broken down into smaller tasks.
+
 ## User Stories
 
 ### As a Shopper 
