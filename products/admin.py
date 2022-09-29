@@ -1,7 +1,7 @@
 from django.contrib import admin
 from .models import Product, Category, Review, User
 
-# Register your models here.
+
 class ProductAdmin(admin.ModelAdmin):
     """
     Product admin
@@ -17,6 +17,7 @@ class ProductAdmin(admin.ModelAdmin):
     )
 
     ordering = ('sku',)
+
 
 class CategoryAdmin(admin.ModelAdmin):
     """
@@ -37,6 +38,7 @@ class ReviewsAdmin(admin.ModelAdmin):
         'rating',
         'created_on',
     )
+
 
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Category, CategoryAdmin)

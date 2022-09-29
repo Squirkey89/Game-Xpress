@@ -38,17 +38,18 @@
             {% if basket_items %}
             <div class="d-block d-md-none">
                 <div class="row">
-                    <div class="col">
+                    <div class="col-12 d-flex justify content center">
+                        {% include "basket/coupon-code.html" %}
                     </div>
                 </div> 
                 <div class="row">
-                    <div class="col">
+                    <div class="col-12 mt-5 ml-4">
                         {% include "basket/basket-total.html" %}
                     </div>
                 </div>                    
                 <div class="row">
-                    <div class="col mb-5">
-                        
+                    <div class="mb-5 ml-4">
+                        {% include "basket/basket-buttons.html" %}
                     </div>
                 </div>
                 {% for item in basket_items %}
@@ -120,7 +121,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td colspan="5" class="text-right">
+                                <td colspan="5" class="text-right mr-2">
                                     {% include "basket/basket-buttons.html" %}
                                 </td>
                             </tr>                            

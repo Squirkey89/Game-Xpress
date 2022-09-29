@@ -7,6 +7,7 @@ from .models import Favourite
 
 # Create your views here.
 
+
 @login_required
 def view_favourite(request):
     """ A view to return the favourite contents page """
@@ -45,6 +46,7 @@ def remove_favourite(request, item_id):
     product = get_object_or_404(Product, pk=item_id)
 
     favourites.products.remove(product)
-    messages.info(request, f'{product.name} has been removed from your favourites')
+    messages.info(request, f'{product.name} has been removed from your \
+                  favourites')
 
     return redirect(reverse('favourite'))

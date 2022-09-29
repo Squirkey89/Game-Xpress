@@ -448,6 +448,16 @@ color: #ffff;
   box-shadow: none;
 }
 
+.basket{
+  margin: auto;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px 10px #20212233;
+  height: auto;
+  background-color: #f8f9fa;
+  ;
+}
+
 /* MailChimp */
 #mc_embed_signup{
   background:#26272b; 
@@ -508,6 +518,7 @@ color: #ffff;
   border-radius: 6px;
   
 }
+
 
 
 .allauth-form-inner-content button:hover,
@@ -637,9 +648,7 @@ i{
     margin-right:0;
     font-weight:600
   }
-  .button{
-    font-size:11px;
-  }
+
   .game-text{ 
     color: white;
     font-size: 27px;
@@ -663,7 +672,9 @@ i{
   color: white;
   font-size: 20px;
 }
-
+.basket{
+  margin-left:10px ;
+}
 }
 @media (max-width: 490px) {
   .shop-now-button{ font-size: 15px;
@@ -693,6 +704,12 @@ i{
 .site-footer{
   text-align: center;
 }
+.button{
+  font-size: 0.740rem;
+}
+}
+.checkBT-button{
+  font-size: 14px;
 }
 
 .basket{

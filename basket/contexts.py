@@ -5,7 +5,6 @@ from products.models import Product
 from .models import Coupon
 
 
-
 def basket_contents(request):
     coupon_id = request.session.get('coupon_id', int())
 
@@ -32,7 +31,7 @@ def basket_contents(request):
             total = basket_total - savings
         else:
             total = basket_total
-            
+
         product_count += quantity
         basket_items.append({
             'item_id': item_id,
@@ -46,7 +45,7 @@ def basket_contents(request):
     else:
         delivery = 0
         free_delivery_delta = 0
-    
+
     grand_total = delivery + total
 
     context = {
@@ -60,10 +59,6 @@ def basket_contents(request):
         'coupon': coupon,
         'coupon_amount': coupon_amount,
         'savings': savings,
-    }  
-
+    }
 
     return context
-
-
-    

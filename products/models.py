@@ -20,8 +20,7 @@ class Category(models.Model):
 
 class Product(models.Model):
     category = models.ForeignKey(
-        'Category', null=True, 
-        blank=True, on_delete=models.SET_NULL
+        'Category', null=True, blank=True, on_delete=models.SET_NULL
         )
     sku = models.CharField(
         max_length=254, null=True, blank=True
@@ -35,8 +34,7 @@ class Product(models.Model):
         max_digits=6, decimal_places=2
         )
     rating = models.DecimalField(
-        max_digits=6, decimal_places=2, 
-        null=True, blank=True)
+        max_digits=6, decimal_places=2, null=True, blank=True)
     image_url = models.URLField(
         max_length=1024, null=True, blank=True
         )
@@ -54,7 +52,7 @@ class Review(models.Model):
         null=False,
         blank=False
         )
-    user = models.ForeignKey(User, 
+    user = models.ForeignKey(User,
                              on_delete=models.CASCADE)
     product = models.ForeignKey(
         Product,
@@ -63,15 +61,12 @@ class Review(models.Model):
     created_on = models.DateTimeField(
         auto_now_add=True
         )
-    review = models.TextField(null=True, 
+    review = models.TextField(null=True,
                               blank=False
                               )
     rating = models.IntegerField(default=0, validators=[
                     MinValueValidator(1),
                     MaxValueValidator(5)])
-   
-    
 
     def __str__(self):
         return self.review
-

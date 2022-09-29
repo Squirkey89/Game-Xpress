@@ -15,7 +15,7 @@ def all_products(request):
     """ A view to show all products, including sorting and search queries """
 
     products = Product.objects.all()
-    reviews =  Product.objects.all()
+    reviews = Product.objects.all()
 
     query = None
     categories = None
@@ -36,13 +36,13 @@ def all_products(request):
                 if direction == 'desc':
                     sortkey = f'-{sortkey}'
             products = products.order_by(sortkey)
-   
+
     if request.GET:
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
             products = products.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
-            
+
 
         if 'q' in request.GET:
             query = request.GET['q']
@@ -54,13 +54,11 @@ def all_products(request):
                 name__icontains=query) | Q(genre__icontains=query)
             products = products.filter(queries)
 
-            
-
     context = {
         'products': products,
         'search_term': query,
         'current_categories': categories,
-        
+
     }
 
     return render(request, 'products/products.html', context)
@@ -80,11 +78,13 @@ def product_detail(request, product_id):
 
     return render(request, 'products/product_detail.html', context)
 
+
 @login_required
 def add_product(request):
     """ Add a product to the store """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, you do not have access to add products.')
+        messages.error(request, 'Sorry, you do not have access to add \
+                       products.')
         return redirect(reverse('home'))
 
     if request.method == 'POST':
@@ -98,12 +98,11 @@ def add_product(request):
                     Please ensure the form is valid.')
     else:
         form = ProductForm()
-        
+
     template = 'products/add_product.html'
     context = {
         'form': form,
-        
-    }
+        }
 
     return render(request, template, context)
 
@@ -112,9 +111,10 @@ def add_product(request):
 def edit_product(request, product_id):
     """ Edit a product in the store """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, you do not have access to edit products.')
+        messages.error(request, 'Sorry, you do not have access to edit \
+             products.')
         return redirect(reverse('home'))
-        
+
     product = get_object_or_404(Product, pk=product_id)
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES, instance=product)
@@ -123,7 +123,8 @@ def edit_product(request, product_id):
             messages.success(request, 'Successfully updated product!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+            messages.error(request, 'Failed to update product. Please ensure\
+                 the form is valid.')
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing {product.name}')
@@ -135,18 +136,20 @@ def edit_product(request, product_id):
     }
 
     return render(request, template, context)
-    
+
 
 @login_required
 def delete_product(request, product_id):
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, you do not have access to delete products.')
+        messages.error(request, 'Sorry, you do not have access to delete \
+                                products.')
         return redirect(reverse('home'))
-        
+
     product = get_object_or_404(Product, pk=product_id)
     product.delete()
     messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))
+
 
 @login_required
 def add_review(request, product_id):
@@ -158,7 +161,8 @@ def add_review(request, product_id):
             review.user = request.user
             review.product = product
             review.save()
-            messages.success(request, 'Your Review has been successfully added')
+            messages.success(request, 'Your Review has been successfully \
+                added')
         else:
             print(f"ERRORS: {form.errors}")
             messages.error(

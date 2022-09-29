@@ -45,4 +45,3 @@ class ReviewForm(forms.ModelForm):
                 'review',
                 'rating',
         )
-    
