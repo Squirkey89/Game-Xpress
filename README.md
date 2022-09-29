@@ -16,6 +16,8 @@ The GameXpress website is a full-stack Django website built using Python, JavaSc
 3. [Features to Implement in the future](#id-implement)
 4. [Testing](#id-testing)
 5. [Marketing](#id-marketing)
+5. [SEO](#id-seo)
+6. 
  
 
 # UX<div id='id-ux'>
@@ -159,7 +161,7 @@ There are a lot of improvements I would make and features I could add to make th
   # Testing<div id='id-testing'>
   During my project I tested my user stories as I was going through my project. I gave each user story an acceptance criteria and tasks and once I felt these were met I moved them to done.
 
-  * USER STORY: Products 1
+  ### USER STORY: Products 1
 
     As a shopper I want to be able to view a list of products so that I can select one to purchase.
 
@@ -167,63 +169,63 @@ There are a lot of improvements I would make and features I could add to make th
     Given the user navigates to the products on the site. When they view the list of all products that are available to purchase. Then the user can choose what they would like to purchase.
 
     Tasks
-    Good layout/Navigation
-    High quality images
-    Good SEO implementation
+    * Good layout/Navigation
+    * High quality images
+    * Good SEO implementation
 
-  * USER STORY: Review 2
+  ### USER STORY: Review 2
     As a shopper I want to be able to leave a review so that I can inform others about my experience with the product.
 
     Acceptance Criteria
     Given that the user will view the product detail to find more information about the ptoduct. When the user clicks on the product they can then see the reviews left by others
 
     Tasks
-    Add Review Model
-    Create review form in product detail template
+    * Add Review Model
+    * Create review form in product detail template
 
-  * USER STORY: Navigation 3
+  ### USER STORY: Navigation 3
     As a shopper I want to be able to navigate around the site so that I can easily view the content that I am looking for.#
 
     Acceptance Criteria
     Given that there is a lot of content on the site. When the user visits the website, they will find a responsive navigation bar and an easy to use navigation system. Then they can then click on the links to direct them to the pages they are looking for.
 
     Tasks
-    Well designed navbar
-    Responsive on all devices
-    Bootstrap and Hamburger dropdown menu
+    * Well designed navbar
+    * Responsive on all devices
+    * Bootstrap and Hamburger dropdown menu
 
-  * USER STORY: Search 4
+  ### USER STORY: Search 4
     As a shopper I want to be able to search for a specific product in the search bar so that I can find what I'm looking for faster
 
     Acceptance Criteria
     Given that the user will want to look for a specific product When they enter the name of the product in the search bar. Then the website searches all products on the website to see if a match is found.
 
     Tasks
-    Add code to product views to perform this function 
+    * Add code to product views to perform this function 
 
-  * USER STORY: Search 5
+  ### USER STORY: Search 5
     As a shopper I want to be able to add products to a favorites list so that I can easily find these products again when I go back to the website
 
     Acceptance Criteria
     Given that the user sees a product that they like. The user can click on the product and add this to there favourites. Then when the user goes to the favourites page a list of the users favourite products will appear on this page.
 
     Tasks
-    Create custom favourite model
-    Link up with views and urls
-    Create favourites template
+    * Create custom favourite model
+    * Link up with views and urls
+    * Create favourites template
 
-  * USER STORY: Adjustments to basket 6
+  ### USER STORY: Adjustments to basket 6
     As a shopper I want to be able to review my cart so that I can make adjustments to my basket prior to checkout
 
     Acceptance Criteria
     Given that the customer can make adjustments to the products that they have in their bag. When they get to the checkout they can make theses adjustments. Then the user can remove individual products or increase or decrease the quantity.
 
     Tasks
-    Create adjust bag view
-    Add html to template
-    Connect URL's
+    * Create adjust bag view
+    * Add html to template
+    * Connect URL's
 
-  * USER STORY: Discounts 7
+  ### USER STORY: Discounts 7
 
     As a shopper I want to be able to add discounts to the checkout so that I can save money when I checkout my products
 
@@ -231,10 +233,10 @@ There are a lot of improvements I would make and features I could add to make th
     Given that there is a newsletter at the footer of the website. When the user enters there email address in the form. Then they will receive discount which can save them money at the checkout
 
     Tasks
-    Create coupon view
-    Add to html in checkout
+    * Create coupon view
+    * Add to html in checkout
 
-  * USER STORY: Payment 8
+  ### USER STORY: Payment 8
 
     As a shopper I want to be able to complete the payment process quickly and easily so that I can purchase products without any problems
 
@@ -242,11 +244,11 @@ There are a lot of improvements I would make and features I could add to make th
     Given the user wants to puchase products from the site. When the user adds products to the bag and navigates to the checkout. Then the users can fill out the credit card details and complete the payment.
 
     Tasks
-    Create a Stripe account
-    Add stripe public and private keys to environment variables
-    Add stripe code to checkout.html
+    * Create a Stripe account
+    * Add stripe public and private keys to environment variables
+    * Add stripe code to checkout.html
 
-  * USER STORY: Order Confirmation 9
+  ### USER STORY: Order Confirmation 9
 
     As a shopper I want to be able to to view an order confirmation after purchase so that I can make sure the order details are all correct
 
@@ -254,10 +256,10 @@ There are a lot of improvements I would make and features I could add to make th
     Given that the shopper wants makes a purchase and would confirmation of this. When the customer enters all their details and processes the payment. Then the customer will be transferred to their profile page. This is where they will see confirmation of the order.
 
     Tasks
-    Write code to display order confirmation for authenticated users
-    Create order mode
+    * Write code to display order confirmation for authenticated users
+    * Create order mode
 
-  * USER STORY: Newsletter 10
+  ### USER STORY: Newsletter 10
 
     As a shopper I want to be able to sign up for the mail list so that I can be contacted when new releases and the latest offers are available
 
@@ -265,11 +267,11 @@ There are a lot of improvements I would make and features I could add to make th
     Given that there is a newsletter aviable to sign up to on the footer of the site. When the customer enters their email address on the for. Then they will recieve offers and discounts.
 
     Tasks
-    Sign up to mailchimp
-    Add html to base template
-    Connect URL's
+    * Sign up to mailchimp
+    * Add html to base template
+    * Connect URL's
 
-  * USER STORY: Categories #11
+  ### USER STORY: Categories 11
 
     As a shopper I want to be able to able to view products in their categories so that I can find what I am looking for easily
 
@@ -277,11 +279,11 @@ There are a lot of improvements I would make and features I could add to make th
     Given that the user will want to find their specific product. When they click on the categories tab on the navbar this will then bring up the different categories, making it easier for the user to find what they are loking for.
 
     Tasks
-    Create categories tab in navbar
-    Connect URL's
-    Create category model
+    * Create categories tab in navbar
+    * Connect URL's
+    * Create category model
 
-  * USER STORY: Registration 12
+  ### USER STORY: Registration 12
 
     As a user I want to be able to register an account so that I can make purchases and use features on the website
 
@@ -289,11 +291,11 @@ There are a lot of improvements I would make and features I could add to make th
     Given that this is a new user, when they they fill out the short registration form, then they are successfully registered and able to log in with chosen credentials.
 
     Tasks
-    Install django-allauth
-    Build Registration Template
-    Test functionality
+    * Install django-allauth
+    * Build Registration Template
+    * Test functionality
 
-  * USER STORY: Order History 13
+  ### USER STORY: Order History 13
 
     As a user I want to be able to view what I had already previously ordered so that I can view a history of my products purchased
 
@@ -301,10 +303,10 @@ There are a lot of improvements I would make and features I could add to make th
     Given that the user has already made a purchase on the website. When the customer logs in to there account and views there profile. Then the user can view a history of the products which they ordered.
 
     Tasks
-    Write code to display order history for authenticated users
-    From users profile links to each order made
+    * Write code to display order history for authenticated users
+    * From users profile links to each order made
 
-  * USER STORY: Registration confirmation#14
+  ### USER STORY: Registration confirmation 14
 
     As a user I want to be able to receive an email confirmation once I have registered so that I can confirm registration was successful
 
@@ -312,11 +314,11 @@ There are a lot of improvements I would make and features I could add to make th
     Given that the user has completed the registration form and provided their email address. The user will instantly receive an email confirming successful registration
 
     Tasks
-    Set up emails with gmail
-    Add code to send emails
-    Install django-allauth
+    * Set up emails with gmail
+    * Add code to send emails
+    * Install django-allauth
 
-  * USER STORY: Log In/Out
+  ### USER STORY: Log In/Out 15
 
     As a user I want to be able to easily log in and log out so that I can so I can gain access to my account quickly and hassel free
 
@@ -324,11 +326,11 @@ There are a lot of improvements I would make and features I could add to make th
     Given that the user is registered, if they go to the log in page and enter username and password and click on Log in. The data the user entered will allow them to log into their associated account. While clicking logout will exit the user from login.
 
     Tasks
-    Install django-allauth
-    Create the template
-    Test Functionality
+    * Install django-allauth
+    * Create the template
+    * Test Functionality
 
-  * USER STORY: Bag Items 17
+  ### USER STORY: Bag Items 16
  
     As a shopper I want to be able to view a list of products in my bag before making payment so that I can see the items and total cost and quantity
 
@@ -336,10 +338,10 @@ There are a lot of improvements I would make and features I could add to make th
     Given the user has to know how much the total is When they view the basket. Then happens product subtotal is visible along with the delivery charge and grand total
 
     Tasks
-    Add totals to checkout view
-    Add html to template
+    * Add totals to checkout view
+    * Add html to template
 
-  * USER STORY: Add 18
+  ### USER STORY: Add 17
     
     As a store owner I want to be able to add a new product to the store so that I can offer customers the latest products
 
@@ -347,12 +349,12 @@ There are a lot of improvements I would make and features I could add to make th
     When the store owner adds a product. Then this becomes available on the site for customers to purchase
 
     Tasks
-    Create add product view
-    Create product form
-    connect URL's
-    Add decorator to protect view
+    * Create add product view
+    * Create product form
+    * connect URL's
+    * Add decorator to protect view
 
-  * USER STORY: Delete 19
+  ### USER STORY: Delete 18
     
     As a store owner I want to be able to delete products so that I can remove products that are out of stock or discontinued
 
@@ -360,11 +362,11 @@ There are a lot of improvements I would make and features I could add to make th
     Given a store owner will want to delete a product that is out of stock. When they delete a product. Then this product is no longer available on the site for customers to purchase
 
     Tasks
-    Create delete product view
-    connect URL's
-    Add decorator to protect view
+    * Create delete product view
+    * connect URL's
+    * Add decorator to protect view
 
-  * USER STORY: Edit 20
+  ### USER STORY: Edit 19
 
     As a store owner I want to be able to edit products on the website so that I can make changes to the product details e.g., price if products on sale
 
@@ -372,12 +374,13 @@ There are a lot of improvements I would make and features I could add to make th
     Given that a store owner may want to edit a products price or information. When the store owner edits a product. Then this change is updated on the products page of the website.
 
     Tasks
-    Create update product view
-    Use product form
-    connect URL's
-    Add decorator to protect view
+    - Create update product view
+    - Use product form
+    - connect URL's
+    - Add decorator to protect view &nbsp;
 
-  * USER STORY: Product details 21
+
+  ### USER STORY: Product details 20
 
     As a shopper I want to be able to view the products details so that I can read the product description
 
@@ -385,12 +388,33 @@ There are a lot of improvements I would make and features I could add to make th
     Given that the user can view more information on each product. When they click on a product, then they are directed to the product details page
 
     Tasks
-    Create product detail view
-    Create product detail template and style
-    Connect URL's
+    * Create product detail view,
+    * Create product detail template and style.
+    * Connect URL's.
+
+## Bugs
+ 
+  * One of the bugs that I encountered when creating the website was was in basket on mobile devices. The right side of the screen would push everything including the footer to the right. This resulted in a white line down the right of the screen. The text was slightly moved to the right also. I spent a long time trying to fix the issue. When I loaded the deployed site on my phone and went to the basket the page looked fine and didnt have this same issue. I eventually contacted tutuor support and they tried to help but we couldnt fix it. The tutor Alex tried the website on firefox and some other browsers and the basket worked fine. 
+
+  * On the product details page the images when clicked on download the file. I was trying to get the image to open up on a new tab. I changed the image  I tried removing the link but was unable to fix this one.
 
  # Marketing<div id='marketing'>
 
-As part of the project we had to use a marketing campaign to promote our ecoommerce store. I created a facebook page for the business. Facebook is a great marketing tool as it allows the shop owner to connect with customers and its a great way grow a business. I have attached a screenshot of the facebook page below. I have added the companies website to the Facebook page as this would be a great way to increase traffic and to attract potential customers.
+## Social Media
+As part of the project we had to use a marketing campaign to promote our ecommerce website. I created a facebook page for the business. Facebook is a great marketing tool as it allows the shop owner to connect with customers and its a great way grow a business. With Facebook's global reach, this will help gain more customers. The companies website is on the Facebook page as this will increase traffic and to attract potential customers.
 
 ![facebook marketing](https://user-images.githubusercontent.com/91072896/193131616-cc01c9a9-4450-46f8-8381-0c08af95b8d2.png)
+ 
+## SEO
+ I created a robots.txt to allow it to be ranked higher and sitemap.xml file to allow for faster search results this will improve the quality and quantity of website traffic. I used wordtracker to see if what key words gain the most traffic and to get an idea what I can use in my website. I searched playstation xbox and nintendo the results are shown below. This along with looking at other similar websites help me come up with these keywords.
+![Screenshot 2022-09-29 23 22 27](https://user-images.githubusercontent.com/91072896/193154113-27445438-72a7-40e4-a1d0-e9acf82a3ecf.png)
+![Screenshot 2022-09-29 23 22 02](https://user-images.githubusercontent.com/91072896/193154217-e9f4ad20-8df9-4165-a9ed-a62c3ce6edf6.png)
+
+![Screenshot 2022-09-29 23 34 58](https://user-images.githubusercontent.com/91072896/193154140-8737fd3b-610f-4c68-8442-f7122ca28fe2.png)
+
+## Keywords
+The meta tags and descriptions have relevant information and keywords that are picked up in a google search  Beow are a list of the key words used in my websites meta tags and descriptions.
+![Screenshot 2022-09-29 23 49 04](https://user-images.githubusercontent.com/91072896/193155623-973d033e-7324-4c8a-be65-d52ce25f50da.png)
+
+## Newsletter
+ When a customer visits our site they can sign up to our newletter. The is located in the footer of our website. The user can enter there email address an they will then receive updates about sales and othe information.
