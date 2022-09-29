@@ -22,6 +22,9 @@ body {
   background: #33353d!important;
   
 }
+.overflow {
+  overflow-x:hidden;
+}
 
 ul {
   padding: 0;
