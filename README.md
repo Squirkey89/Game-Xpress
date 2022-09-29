@@ -1,108 +1,91 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# GameXpress
 
-Welcome Squirkey89,
+The GameXpress website is a full-stack Django website built using Python, JavaScript, HTML and CSS. The web application serves as a full-featured B2C e-commerce website for a video game retailer. Customers can purchase a wide selection of games on the site. To name just a few, there are genres like shooting, fighting, football, and racing. The website is simple to use the customer can easlily view products with one click from the home page. The products detail page gives the customer more information about each product and at the bottom of this page the customer can leave a review once they have signed up to the website. The website also contains a favourite page. Customers can add products that they are interested in to their favourites and that list will remain there until they are removed. The customer must be signed in to perform this task. Products can be added to the basket and can be purchased using card payment. The customers can enter a discount code at the basket to get ten percent off their order.An Order confirmation email is sent to the address provided. Users can also stay updated with all the latest and exclusive offers by following on Facebook page and by subscribing to the monthly newsletter.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+![amiresponsive](https://user-images.githubusercontent.com/91072896/193037294-1e1f4dd4-a3bf-468a-b4fb-1e85b97c6f78.png)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
 
-## Gitpod Reminders
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+# Table of Contents
+1. [UX](#id-ux)
+2. [Scope](#id-scope)
+2. [Structure](#id-structure)
+    * [Wireframe](#id-wireframe)
+    * [Database Schema](#id-Database-Schema)
+3. [Features](#id-features)
+    * [Navigation-bar ](#id-nav)
+    * [Banner/About](#id-banner) 
+    * [How It Works](#id-works)
+    * [Recipes](#id-recipes)
+    * [Recipes Details](#id-details)
+    * [Create/Edit recipe](#id-create/edit)
+    * [Edit/Delete recipe](#id-edit/delete)
+    * [Comments](#id-comments)
+    * [Like Button](#id-like)
+    * [Sign Up/Login](#id-login)
+    * [Footer](#id-footer)
+4. [Features to Implement in the future](#id-implement)
+5. [Testing](#id-testing) 
+6. [Bugs](#id-bugs) 
+7. [Technologies Used](#id-technologies)
+8. [Deployment](#id-deployment)
+9. [Credits](#id-credits)
+10. [Acknowledgements](#id-acknowledgements)
 
-`python3 -m http.server`
+# UX<div id='id-ux'>
+## User Stories
 
-A blue button should appear to click: _Make Public_,
+### As a Shopper 
 
-Another blue button should appear to click: _Open Browser_.
+* As a shopper I want to be able to add discounts to the checkout so that I can save money when I checkout my products.
+* As a shopper I want to be able to leave a review so that I can inform others about my experience with the product.
+* As a shopper I want to be able to navigate around the site so that I can easily view the content that I am looking for.
+* As a shopper I want to be able to view a list of products in my bag before making payment so that I can see the items and total cost and quantity.
+* As a shopper I want to be able to to view an order confirmation after purchase so that I can make sure the order details are all correct.
+* As a shopper I want to be able to view the products details so that I can read the product description.
+* As a shopper I want to be able to able to view products in their categories so that I can find what I am looking for easily.
+* As a shopper I want to be able to review my cart so that I can make adjustments to my cart prior to checkout.
+* As a shopper I want to be able to view a list of products so that I can select one to purchase..
+* As a shopper I want to be able to add products to a favorites list so that I can easily find these products again when I go back to the website.
+* As a shopper I want to be able to complete the payment process quickly and easily so that I can purchase products without any problems.
+* As a shopper I want to be able to search for a specific product in the search bar so that I can find what I'm looking for faster.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+### As a User
 
-A blue button should appear to click: _Make Public_,
+* As a user I want to be able to easily log in and log out so that I can so I can gain access to my account quickly and hassel free.
+* As a user I want to be able to register an account so that I can make purchases and use features on the website.
+* As a user I want to be able to view what I had already previously ordered so that I can view a history of my products purchased.
+* As a user I want to be able to reset my password if I forget it so that I can regain access to my account.
+* As a user I want to be able to receive an email confirmation once I have registered so that I can confirm registration was successful
 
-Another blue button should appear to click: _Open Browser_.
+### As a Store Owner
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+.
+* As a store owner I want to be able to add a new product to the store so that I can offer customers the latest products.
+* As a store owner I want to be able to delete products so that I can remove products that are out of stock or discontinued.
+* As a store owner I want to be able to edit products on the website so that I can make changes to the product details e.g., price if products on sale.
 
-To log into the Heroku toolbelt CLI:
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
 
-------
 
-## Release History
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
 
-------
 
-## FAQ about the uptime script
 
-**Why have you added this script?**
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
 
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
