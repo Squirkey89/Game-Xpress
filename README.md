@@ -16,8 +16,10 @@ The GameXpress website is a full-stack Django website built using Python, JavaSc
 3. [Features to Implement in the future](#id-implement)
 4. [Testing](#id-testing)
 5. [Marketing](#id-marketing)
-5. [SEO](#id-seo)
-6. 
+6. [SEO](#id-seo)
+7. [Technologies Used](#tech)
+8. [Deployment](#deploy)
+9. [Credits](#credits)
  
 
 # UX<div id='id-ux'>
@@ -29,50 +31,43 @@ GameXpress is a business to consumer B2C ecommerce site. It is targeted towards 
 
 ## Scope<div id='id-Scope'>
 
-### User Stories
+## Epics & User Stories
+ ### Home app
+  - As a shopper I want to be able to navigate around the site so that I can easily view the content that I am looking for.
+  - As a shopper I want to be able to search for a specific product in the search bar so that I can find what I'm looking for faster.
+  - As a shopper I want to be able to sign up for the mail list so that I can be contacted when new releases and the latest offers are available
 
-#### As a Shopper 
+ ### Products app
+  - As a store owner I want to be able to add a new product to the store so that I can offer customers the latest products.
+  - As a store owner I want to be able to delete products so that I can remove products that are out of stock or discontinued.
+  - As a store owner I want to be able to edit products on the website so that I can make changes to the product details e.g., price if products on sale. 
+  - As a shopper I want to be able to able to view products in their categories so that I can find what I am looking for easily.
+  - As a shopper I want to be able to view the products details so that I can read the product description.
+  * As a shopper I want to be able to view a list of products so that I can select one to purchase.
 
-* As a shopper I want to be able to add discounts to the checkout so that I can save money when I checkout my products.
-* As a shopper I want to be able to leave a review so that I can inform others about my experience with the product.
-* As a shopper I want to be able to navigate around the site so that I can easily view the content that I am looking for.
-* As a shopper I want to be able to view a list of products in my bag before making payment so that I can see the items and total cost and quantity.
-* As a shopper I want to be able to to view an order confirmation after purchase so that I can make sure the order details are all correct.
-* As a shopper I want to be able to view the products details so that I can read the product description.
-* As a shopper I want to be able to able to view products in their categories so that I can find what I am looking for easily.
-* As a shopper I want to be able to review my cart so that I can make adjustments to my cart prior to checkout.
-* As a shopper I want to be able to view a list of products so that I can select one to purchase..
-* As a shopper I want to be able to add products to a favorites list so that I can easily find these products again when I go back to the website.
-* As a shopper I want to be able to complete the payment process quickly and easily so that I can purchase products without any problems.
-* As a shopper I want to be able to search for a specific product in the search bar so that I can find what I'm looking for faster.
+ ### Basket app
+ - As a shopper I want to be able to review my basket so that I can make adjustments to my basket prior to checkout.
+ 
+ ### Checkout app
+  - As a shopper I want to be able to complete the payment process quickly and easily so that I can purchase products without any problems.
+  - As a shopper I want to be able to view a list of products in my bag before making payment so that I can see the items and total cost and quantity.
 
-#### As a User
+ ### Profiles app
+  - As a user I want to be able to view what I had already previously ordered so that I can view a history of my products purchased.
+  - As a user I want to be able to register an account so that I can make purchases and use features on the website.
+  - As a shopper I want to be able to to view an order confirmation after purchase so that I can make sure the order details are all correct.
+  - As a user I want to be able to reset my password if I forget it so that I can regain access to my account.
+  - * As a user I want to be able to receive an email confirmation once I have registered so that I can confirm registration was successful
+    As a user I want to be able to easily log in and log out so that I can so I can gain access to my account quickly and hassel free
 
-* As a user I want to be able to easily log in and log out so that I can so I can gain access to my account quickly and hassel free.
-* As a user I want to be able to register an account so that I can make purchases and use features on the website.
-* As a user I want to be able to view what I had already previously ordered so that I can view a history of my products purchased.
-* As a user I want to be able to reset my password if I forget it so that I can regain access to my account.
-* As a user I want to be able to receive an email confirmation once I have registered so that I can confirm registration was successful
+ ### Favourites app 
+  - As a shopper I want to be able to add products to a favorites list so that I can easily find these products again when I go back to the website.
 
-#### As a Store Owner
-
-* As a store owner I want to be able to add a new product to the store so that I can offer customers the latest products.
-* As a store owner I want to be able to delete products so that I can remove products that are out of stock or discontinued.
-* As a store owner I want to be able to edit products on the website so that I can make changes to the product details e.g., price if products on sale.
-
-### Epics
- * Set up Django - #1
- * Home app - #2
- * Products app - #3 
- * Basket app - #4 
- * Checkout app - #5 
- * Profiles app - #6 
- * Favourites app - #7 
- * Configure Coupon - #8 
- * Configure Review - #9 
- * Deployment - #10 
- * SEO Implementation- #11 
- * Web Marketing - #12
+ ### Configure Coupon 
+  - As a shopper I want to be able to add discounts to the checkout so that I can save money when I checkout my products.
+ ### Configure Review
+  - As a shopper I want to be able to leave a review so that I can inform others about my experience with the product.
+ 
   
 ## Structure<div id='id-Structure'>
 ### Database Schema
@@ -117,24 +112,29 @@ Below is a schema of the models used in this application, created with Lucidchar
 
 ## Navigation-bar<div id='id-nav'>
 The navigation bar is at the top of the website. This includes the website name which appears at the left of the nav bar. It also includes links to different categories that the user can visit. Theres a link to the basket, user profile and favourites at the top right of the navigation bar. There is also a search box in the center which can be used to search products. The navbar links change format to hamburger format if the website is viewed on smaller devices.&nbsp;
+
 ![nav-bar](https://user-images.githubusercontent.com/91072896/193100438-caf4b61e-37d0-46eb-861e-a3346a62570b.png)
 
 
 ## Home<div id='id-home'>
-The home page features three images on a carousel. These images show the customer the type of products to expect from the website. The user has the option to choose netween the three with a link to three different categories.&nbsp;
+The home page features three images on a carousel. These images show the customer the type of products to expect from the website. The user has the option to choose between the three with a link to three different categories.&nbsp;
+
 ![Home](https://user-images.githubusercontent.com/91072896/193098334-0217301e-1edb-49ba-a348-c3eb3845c55b.png)
 
 ## Products<div id='id-products'>
 The products page displays the summary of each product the website sells.The products page contains product image, product name, category, price and favourites button. Each product can be clicked on to view the product in detail on another page. Products can also be filtered via different categories by rating price and ascending or descending order.&nbsp;
+
 ![products](https://user-images.githubusercontent.com/91072896/193101055-05501abc-6e5d-43d4-9ea7-75d21792df35.png)
 
 ## Product-detail<div id='id-product-detail'>
 The product detail page shows information of the product including; product title, price, category, and product description. The user can add products to their basket before checkout. The user can also add products to their favourites list. Below the product detail there is an area for submit and read users reviews.&nbsp;
+
 ![product detail](https://user-images.githubusercontent.com/91072896/193102028-91f2e88a-4b51-4a8c-b07a-95b602c8b46b.png)
 ![review](https://user-images.githubusercontent.com/91072896/193103476-55fbed49-a4d6-418b-aa1a-c556363157dd.png)
 
 ## Basket<div id='id-basket'>
 Once the user goes to the basket page they can review there order. Thre is an option to increment or decrement quantity or remove the item completely. There is a discount code at the bottom of the page and a banner above the page with a valid code. When the user types this into the discount box they will receive 10% off there order. They will get the amount deducted from their total.&nbsp;
+
 ![Basket](https://user-images.githubusercontent.com/91072896/193106655-8f9b0b0e-34c8-44ed-a46f-c53609483c6b.png)
 
 ## Checkout<div id='id-checkout'>
@@ -142,14 +142,17 @@ When the user is ready to proceed to the checkout page after selecting their cho
 
 ## Checkout-success<div id='id-checkout-success'>
 After users have placed their order, an order confirmation page is displayed with the summary of the order placed including; product details, personal information, order number and the email that is used to send the order confirmation to.&nbsp;
+
 ![checkout success](https://user-images.githubusercontent.com/91072896/193108200-716d8a02-0a42-4118-a4ea-82d5f918e3e5.png)
 
 ## User-Profile<div id='id-user-profile'>
 Registered users have an option to view their profile. This page is where the customer sets their personal information so this information is saved when the customer wants to go back to make a purchase. This also has a list of the users order history which they can view at any time.
+
 ![User profile](https://user-images.githubusercontent.com/91072896/193109731-519d3e92-7165-4609-86e3-868fde9210fd.png)
 
 ## Favourites<div id='id-favourites'>
 The favourites page is a page only available to users that have registered an account. These users have an option to add products to their favourites. The user can add a product that they may want to buy sometime in the future. The user can add as many items as they would like and they can aslo remove these products. 
+
 ![Favourites](https://user-images.githubusercontent.com/91072896/193110282-605f094d-057f-4b2e-80e0-2c88717051ec.png)
 
 
@@ -159,7 +162,7 @@ There are a lot of improvements I would make and features I could add to make th
   * The favourites app can do almost everything but I would implement an add to basket buttn. This would allow the customer to easily purchase the item if its in their favourites.
 
   # Testing<div id='id-testing'>
-  During my project I tested my user stories as I was going through my project. I gave each user story an acceptance criteria and tasks and once I felt these were met I moved them to done.
+  During my project I tested my user stories as I was going through my project. I gave each user story an acceptance criteria and tasks and once I felt these were met I moved the story to complete.
 
   ### USER STORY: Products 1
 
@@ -203,7 +206,7 @@ There are a lot of improvements I would make and features I could add to make th
     Tasks
     * Add code to product views to perform this function 
 
-  ### USER STORY: Search 5
+  ### USER STORY: Favorites 5
     As a shopper I want to be able to add products to a favorites list so that I can easily find these products again when I go back to the website
 
     Acceptance Criteria
@@ -215,7 +218,7 @@ There are a lot of improvements I would make and features I could add to make th
     * Create favourites template
 
   ### USER STORY: Adjustments to basket 6
-    As a shopper I want to be able to review my cart so that I can make adjustments to my basket prior to checkout
+    As a shopper I want to be able to review my basket so that I can make adjustments to my basket prior to checkout
 
     Acceptance Criteria
     Given that the customer can make adjustments to the products that they have in their bag. When they get to the checkout they can make theses adjustments. Then the user can remove individual products or increase or decrease the quantity.
@@ -407,6 +410,7 @@ As part of the project we had to use a marketing campaign to promote our ecommer
  
 ## SEO
  I created a robots.txt to allow it to be ranked higher and sitemap.xml file to allow for faster search results this will improve the quality and quantity of website traffic. I used wordtracker to see if what key words gain the most traffic and to get an idea what I can use in my website. I searched playstation xbox and nintendo the results are shown below. This along with looking at other similar websites help me come up with these keywords.
+
 ![Screenshot 2022-09-29 23 22 27](https://user-images.githubusercontent.com/91072896/193154113-27445438-72a7-40e4-a1d0-e9acf82a3ecf.png)
 ![Screenshot 2022-09-29 23 22 02](https://user-images.githubusercontent.com/91072896/193154217-e9f4ad20-8df9-4165-a9ed-a62c3ce6edf6.png)
 
@@ -414,7 +418,56 @@ As part of the project we had to use a marketing campaign to promote our ecommer
 
 ## Keywords
 The meta tags and descriptions have relevant information and keywords that are picked up in a google search  Beow are a list of the key words used in my websites meta tags and descriptions.
+
 ![Screenshot 2022-09-29 23 49 04](https://user-images.githubusercontent.com/91072896/193155623-973d033e-7324-4c8a-be65-d52ce25f50da.png)
 
 ## Newsletter
  When a customer visits our site they can sign up to our newletter. The is located in the footer of our website. The user can enter there email address an they will then receive updates about sales and othe information.
+
+ ![Screenshot 2022-09-29 23 58 27](https://user-images.githubusercontent.com/91072896/193156677-7d3e37b3-4fa1-418a-a7e0-16afb46e6574.png)
+
+# Technologies Used<div id='tech'>
+
+* HTML was used to structure the site.
+* CSS was site design.
+* JavaScript was used to display messages to the user.
+* Python+Django framework.
+* PostgresSQL was used as relational database.
+* Bootstrap framework was used cross the site.
+* Google Fonts were used to import the font into the styles.
+* Font Awesome was used on all pages throughout the website to add icons.
+* GitHub was used to store the projects code after being pushed from Git.
+* Balsamiq was used to create the wireframes.
+* Amazon AWS S3 was used to host media and static files for the site.
+* Heroku was used for deployment and hosting environment.
+
+# Deployment<div id='deploy'>
+
+These re the following steps taken to deploy on heroku
+* Create new Heroku app on the heroku dashboard
+* Name your Heroku app and select the region: - Give the project a name.
+* Add database Navigate to the resources to add a database. In the resources tab go to the add-ons section, search for "Heroku Postgres
+* Navigate to the "Settings" tab and select "Reveal Config Vars". Copy the "DATABASE_URL"
+* Create a new file called "env.py".
+* In the env.py file, import the os library: - Add "import os"
+* Set environment variables: - Add 'os.environ["DATABASE_URL"]
+* Add in a custom secret key: - Add 'os.environ["SECRET_KEY"] 
+* Add secret key to config vars in heroku
+* In the settings.py file within the django app, import os and import dj_database_url
+* Replace the databases with DATABASES = { 'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))}
+* In the terminal migrate the models over to the new database connection.
+
+# Credits
+## Content
+* I used the Code Institutes Boutique Ado walkthrough project as a reference.
+* The footer html and css was taken from a site called [niemvuilaptrinh](https://us.niemvuilaptrinh.com/article/29-footer-examples-for-website) 
+* Am I Responsive was used for the header image that appears at the top of the read me file.
+## Media
+* The images used in the website were from smyths website and AdobeStock.
+* I used lucid chart to create my DB Schema.
+* I used Balsamiq to create the wireframe.
+## Acknowledgments
+* My mentor for the useful feedback direction and guidance he has provided since the beginning of the course.
+* The online tutors help and and advice when stuck on a problem with no one else to turn too.
+* The slack community who are very helpful.
+* The Code Institite course material.
