@@ -8,7 +8,7 @@ from django.contrib.auth.decorators import login_required
 from .models import Product, Category, Review
 from .forms import ProductForm, ReviewForm
 
-# Create your views here.
+# pylint: disable=no-member
 
 
 def all_products(request):
@@ -42,7 +42,6 @@ def all_products(request):
             categories = request.GET['category'].split(',')
             products = products.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
-
 
         if 'q' in request.GET:
             query = request.GET['q']
@@ -140,6 +139,8 @@ def edit_product(request, product_id):
 
 @login_required
 def delete_product(request, product_id):
+    """ Delete a product store owner"""
+
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, you do not have access to delete \
                                 products.')
@@ -153,6 +154,8 @@ def delete_product(request, product_id):
 
 @login_required
 def add_review(request, product_id):
+    """ Adds review to site"""
+
     if request.method == 'POST':
         form = ReviewForm(request.POST)
         if form.is_valid():

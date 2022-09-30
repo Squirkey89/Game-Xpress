@@ -27,6 +27,7 @@ def view_favourite(request):
 
 @login_required
 def add_to_favourite(request, item_id):
+    """ A view to addd the to favourite page """
 
     product = get_object_or_404(Product, pk=item_id)
     redirect_url = request.POST.get('redirect_url')
@@ -41,6 +42,7 @@ def add_to_favourite(request, item_id):
 
 @login_required
 def remove_favourite(request, item_id):
+    """ A view to addd the to remove product from favourites"""
 
     favourites = Favourite.objects.get(user=request.user)
     product = get_object_or_404(Product, pk=item_id)

@@ -124,7 +124,6 @@
                                     {% include "basket/basket-buttons.html" %}
                                 </td>
                             </tr>                            
-                        </tr>
                     </table>
                 </div>
                 {% else %}
@@ -147,7 +146,7 @@
 {{ block.super }}
 {% include 'products/includes/quantity_input_script.html' %}
 
-<script type="text/javascript">
+<script>
     // Update quantity on click
     $('.update-link').click(function (e) {
         var form = $(this).prev('.update-form');
@@ -169,13 +168,13 @@
             });
     })
 </script>
-<script type="text/javascript">
+<script>
     var scrollToTopBtn = document.querySelector("#scrollToTopBtn")
     scrollToTopBtn.addEventListener("click", function () {
         window.scrollTo(0, 0);
     });
 </script>
-<script type="text/javascript">
+<script>
     document.querySelector(".banner-close").addEventListener("click", function () {
         this.closest(".delivery-banner").style.display = "none";
     })

@@ -3,8 +3,6 @@ from django.shortcuts import (render, redirect, reverse,
 from django.contrib import messages
 from django.views.decorators.http import require_http_methods
 from .models import Coupon
-from django.contrib.auth.decorators import login_required
-
 
 from products.models import Product
 
@@ -12,7 +10,7 @@ from products.models import Product
 
 
 def view_basket(request):
-    """ A view to return the baket contents page """
+    """ A view to return the basket contents page """
     return render(request, 'basket/basket.html')
 
 
@@ -38,7 +36,7 @@ def add_to_basket(request, item_id):
 
 
 def adjust_basket(request, item_id):
-    """ Add a product to the shopping basket """
+    """ Adjust uantity of the product to the basket """
     product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))
     basket = request.session.get('basket', {})
@@ -55,7 +53,7 @@ def adjust_basket(request, item_id):
 
 
 def remove_from_basket(request, item_id):
-    """ Add a product to the shopping basket """
+    """ Remove a product to the shopping basket """
     product = get_object_or_404(Product, pk=item_id)
 
     try:

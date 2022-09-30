@@ -74,7 +74,7 @@
 
 {% block postloadjs %}
 {{ block.super }}
-<script type="text/javascript">
+<script>
   document.querySelector(".banner-close").addEventListener("click", function () {
     this.closest(".delivery-banner").style.display = "none";
   })

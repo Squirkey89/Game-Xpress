@@ -159,7 +159,7 @@ The favourites page is a page only available to users that have registered an ac
 # Features to Implement in the future<div id='id-implement'>
 There are a lot of improvements I would make and features I could add to make the site better.
   * The coupon code can currently be used by a customer as many times as they would like. I would change this to one code per customer. When creating the coupon I was going to make an expiry but decided against it.
-  * The favourites app can do almost everything but I would implement an add to basket buttn. This would allow the customer to easily purchase the item if its in their favourites.
+  * The favourites app can do almost everything but I would implement an add to basket button. This would allow the customer to easily purchase the item if its in their favourites.
 
   # Testing<div id='id-testing'>
   During my project I tested my user stories as I was going through my project. I gave each user story an acceptance criteria and tasks and once I felt these were met I moved the story to complete.
@@ -400,6 +400,9 @@ There are a lot of improvements I would make and features I could add to make th
   * One of the bugs that I encountered when creating the website was was in basket on mobile devices. The right side of the screen would push everything including the footer to the right. This resulted in a white line down the right of the screen. The text was slightly moved to the right also. I spent a long time trying to fix the issue. When I loaded the deployed site on my phone and went to the basket the page looked fine and didnt have this same issue. I eventually contacted tutuor support and they tried to help but we couldnt fix it. The tutor Alex tried the website on firefox and some other browsers and the basket worked fine. 
 
   * On the product details page the images when clicked on download the file. I was trying to get the image to open up on a new tab. I changed the image  I tried removing the link but was unable to fix this one.
+
+  * On mobile devices the favourites page remove button is not visible. This was something I found out at the very last minute and was'nt able to fix it. The problem was that on mobile devices on dev tools the buttom is there on every viewpoint. So I didnt know that was an issue until it was too late.
+
 
  # Marketing<div id='marketing'>
 

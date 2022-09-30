@@ -1,8 +1,7 @@
-from django.shortcuts import (render, redirect, reverse, 
+from django.shortcuts import (render, redirect, reverse,
                               get_object_or_404, HttpResponse)
 from django.views.decorators.http import require_POST
 from django.contrib import messages
-from django.views.generic import View
 from basket.models import Coupon
 
 from .forms import OrderForm
@@ -36,12 +35,14 @@ def cache_checkout_data(request):
 
 
 def checkout(request):
+    """ Processes checkout"""
+
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
     if request.method == 'POST':
         basket = request.session.get('basket', {})
-  
+
         form_data = {
             'full_name': request.POST['full_name'],
             'email': request.POST['email'],
@@ -86,7 +87,7 @@ def checkout(request):
                     return redirect(reverse('view_basket'))
 
             request.session['save_info'] = 'save-info' in request.POST
-            return redirect(reverse('checkout_success', 
+            return redirect(reverse('checkout_success',
                             args=[order.order_number]))
         else:
             messages.error(request, 'There was an error with your form. \
@@ -122,7 +123,7 @@ def checkout(request):
                     'county': profile.default_county,
                 })
             except UserProfile.DoesNotExist:
-                order_form = OrderForm() 
+                order_form = OrderForm()
         else:
             order_form = OrderForm()
 
@@ -135,16 +136,14 @@ def checkout(request):
         'order_form': order_form,
         'stripe_public_key': stripe_public_key,
         'client_secret': intent.client_secret,
-    
     }
 
     return render(request, template, context)
 
 
 def checkout_success(request, order_number):
-    """
-    Handle successful checkouts
-    """
+    """ Handle successful checkouts"""
+
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
 
